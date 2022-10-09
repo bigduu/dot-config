@@ -1,42 +1,35 @@
-require 'lspconfig'.rust_analyzer.setup {
-  on_attach = function(client, bufnr)
-    require "lsp-format".on_attach(client)
-    local function buf_set_keymap(...)
-      vim.api.nvim_buf_set_keymap(bufnr, ...)
-    end
+local nvim_lsp = require 'lspconfig'
 
-    require('key-bindings').rustMapLSP(buf_set_keymap)
-    vim.cmd('autocmd BufWritePre <buffer> Format')
-  end,
+local opts = {
   tools = {
-    autoSetHints = true,
-    hover_with_actions = true,
+    runnables = {
+      use_telescope = true
+    },
     inlay_hints = {
+      auto = true,
       show_parameter_hints = false,
       parameter_hints_prefix = "",
       other_hints_prefix = "",
     },
   },
-  settings = {
-    ["rust_analyzer"] = {
-      imports = {
-        granularity = {
-          group = "module"
+
+  -- all the opts to send to nvim-lspconfig
+  -- these override the defaults set by rust-tools.nvim
+  -- see https://github.com/neovim/nvim-lspconfig/blob/master/CONFIG.md#rust_analyzer
+  server = {
+    -- on_attach is a callback called when the language server attachs to the buffer
+    -- on_attach = on_attach,
+    settings = {
+      -- to enable rust-analyzer settings visit:
+      -- https://github.com/rust-analyzer/rust-analyzer/blob/master/docs/user/generated_config.adoc
+      ["rust-analyzer"] = {
+        -- enable clippy on save
+        checkOnSave = {
+          command = "clippy"
         },
-        prefix = "self"
-      },
-      cargo = {
-        buildScripts = {
-          enable = true
-        },
-        loadOutDirsFromCheck = true
-      },
-      procMacro = {
-        enable = true
-      },
-      checkOnSave = {
-        command = "clippy"
       }
     }
-  }
+  },
 }
+
+require('rust-tools').setup(opts)

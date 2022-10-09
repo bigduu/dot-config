@@ -69,6 +69,7 @@ packer.startup({ function()
       }
     },
     use 'rust-lang/rust.vim',
+    use 'simrat39/rust-tools.nvim',
     use 'mattn/webapi-vim',
     -- code translator
     use 'voldikss/vim-translator',
@@ -97,7 +98,6 @@ packer.startup({ function()
       end,
     },
     -- tabnine code completed
-    use "hrsh7th/nvim-cmp", --completion
     use { 'tzachar/cmp-tabnine', run = './install.sh', requires = 'hrsh7th/nvim-cmp' },
     use "github/copilot.vim",
   }
