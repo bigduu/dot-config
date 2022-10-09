@@ -7,9 +7,7 @@ packer.startup({ function()
   use 'vim-airline/vim-airline-themes'
   use 'udalov/kotlin-vim'
   --nord theme
-  use 'shaunsingh/nord.nvim'
-  -- onedark
-  use("ful1e5/onedark.nvim")
+  use 'projekt0n/github-nvim-theme'
   -- nvim-tree
   use {
     'kyazdani42/nvim-tree.lua',

@@ -171,6 +171,11 @@ _G.packer_plugins = {
     path = "/Users/bigduu/.local/share/nvim/site/pack/packer/start/friendly-snippets",
     url = "https://github.com/rafamadriz/friendly-snippets"
   },
+  ["github-nvim-theme"] = {
+    loaded = true,
+    path = "/Users/bigduu/.local/share/nvim/site/pack/packer/start/github-nvim-theme",
+    url = "https://github.com/projekt0n/github-nvim-theme"
+  },
   ["hop.nvim"] = {
     loaded = true,
     path = "/Users/bigduu/.local/share/nvim/site/pack/packer/start/hop.nvim",
@@ -190,11 +195,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/bigduu/.local/share/nvim/site/pack/packer/start/lspkind-nvim",
     url = "https://github.com/onsails/lspkind-nvim"
-  },
-  ["nord.nvim"] = {
-    loaded = true,
-    path = "/Users/bigduu/.local/share/nvim/site/pack/packer/start/nord.nvim",
-    url = "https://github.com/shaunsingh/nord.nvim"
   },
   ["nui.nvim"] = {
     loaded = true,
@@ -258,11 +258,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/bigduu/.local/share/nvim/site/pack/packer/start/nvim-web-devicons",
     url = "https://github.com/kyazdani42/nvim-web-devicons"
-  },
-  ["onedark.nvim"] = {
-    loaded = true,
-    path = "/Users/bigduu/.local/share/nvim/site/pack/packer/start/onedark.nvim",
-    url = "https://github.com/ful1e5/onedark.nvim"
   },
   ["packer.nvim"] = {
     loaded = true,
