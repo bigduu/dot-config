@@ -20,12 +20,6 @@ local opts = {
     -- on_attach is a callback called when the language server attachs to the buffer
     -- on_attach = on_attach,
     on_attach = function(client, bufnr)
-      require "lsp-format".on_attach(client)
-      local function buf_set_keymap(...)
-        vim.api.nvim_buf_set_keymap(bufnr, ...)
-      end
-
-      require('key-bindings').rustMapLSP(buf_set_keymap)
     end,
     settings = {
       -- to enable rust-analyzer settings visit:
