@@ -3,7 +3,9 @@ packer.startup({
 	function()
 		-- Packer can manage itself
 		use("wbthomason/packer.nvim")
-
+		-- git tools
+		use("APZelos/blamer.nvim")
+		use({ "sindrets/diffview.nvim", requires = "nvim-lua/plenary.nvim" })
 		-- lualine
 		use({ "nvim-lualine/lualine.nvim", requires = { "kyazdani42/nvim-web-devicons" } })
 		use("arkav/lualine-lsp-progress")

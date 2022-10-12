@@ -13,6 +13,8 @@ map("i", "jj", "<ESC>", opt)
 
 map("n", "H", ":BufferLineCyclePrev<CR>", opt)
 map("n", "L", ":BufferLineCycleNext<CR>", opt)
+map("n", "<C-H>", ":BufferLineMovePrev<CR>", opt)
+map("n", "<C-L>", ":BufferLineMoveNext<CR>", opt)
 
 map("n", "<Tab>", "%", opt)
 
@@ -27,10 +29,8 @@ map("n", "<C-k>", "<C-w>k", opt)
 map("n", "<C-a>", "<C-w>>", opt)
 map("n", "<C-d>", "<C-w><", opt)
 
-map("n", "<C-q>", "<C-w>q", opt)
-
+-- easymotion
 map("n", "<leader>e", ":HopWord<CR>", opt)
-
 map("n", "<leader>tr", ":TranslateW<CR>", opt)
 map("v", "<leader>tr", ":TranslateW<CR>", opt)
 
