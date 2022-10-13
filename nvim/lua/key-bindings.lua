@@ -84,7 +84,9 @@ end
 -- nvim-cmp
 pluginKeys.cmp = function(cmp)
 	return {
-		--['<C-Space>'] = cmp.mapping.complete(),
+		["<C-j>"] = cmp.mapping.scroll_docs(4),
+		["<C-k>"] = cmp.mapping.scroll_docs(-4),
+		["<C-e>"] = cmp.mapping.close(),
 		["<C-p>"] = cmp.mapping.select_prev_item(),
 		["<C-n>"] = cmp.mapping.select_next_item(),
 		["<esc>"] = cmp.mapping.abort(),
