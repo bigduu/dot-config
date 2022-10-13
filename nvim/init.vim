@@ -1,10 +1,10 @@
 lua require('basic')
 lua require('key-bindings')
 lua require('plugins')
-lua require('lsp.lsp-collection')
 lua require('plugin-config.plugins-collection')
-lua require('lsp.ui')
 lua require('colorscheme')
+lua require('lsp.setup')
+" lua require("dap.nvim-dap.init")
 
 filetype plugin on
 set encoding=utf-8

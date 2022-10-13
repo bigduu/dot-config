@@ -5,16 +5,8 @@ if not status then
 end
 
 local formatting = null_ls.builtins.formatting
-local augroup = vim.api.nvim_create_augroup("LspFormatting", {})
-
-local lsp_formatting = function(bufnr)
-	vim.lsp.buf.format({
-		filter = function(client)
-			return client.name == "null-ls"
-		end,
-		bufnr = bufnr,
-	})
-end
+local diagnostics = null_ls.builtins.diagnostics
+local code_actions = null_ls.builtins.code_actions
 
 null_ls.setup({
 	debug = false,
@@ -25,7 +17,7 @@ null_ls.setup({
 		-- StyLua
 		formatting.stylua,
 		-- frontend
-		formatting.prettier.with({ -- 只比默认配置少了 markdown
+		formatting.prettier.with({ -- 比默认少了 markdown
 			filetypes = {
 				"javascript",
 				"javascriptreact",
@@ -42,27 +34,45 @@ null_ls.setup({
 			},
 			prefer_local = "node_modules/.bin",
 		}),
-		formatting.fixjson,
-		formatting.black.with({ extra_args = { "--fast" } }),
-		-- rust format
+		-- rustfmt
+		-- rustup component add rustfmt
 		formatting.rustfmt,
+		-- Python
+		-- pip install black
+		-- asdf reshim python
+		formatting.black.with({ extra_args = { "--fast" } }),
+		-----------------------------------------------------
+		-- Ruby
+		-- gem install rubocop
+		formatting.rubocop,
+		-----------------------------------------------------
+		-- formatting.fixjson,
+		-- Diagnostics  ---------------------
+		diagnostics.eslint.with({
+			prefer_local = "node_modules/.bin",
+		}),
+		-- diagnostics.markdownlint,
+		-- markdownlint-cli2
+		-- diagnostics.markdownlint.with({
+		--   prefer_local = "node_modules/.bin",
+		--   command = "markdownlint-cli2",
+		--   args = { "$FILENAME", "#node_modules" },
+		-- }),
+		--
+		-- code actions ---------------------
+		code_actions.gitsigns,
+		code_actions.eslint.with({
+			prefer_local = "node_modules/.bin",
+		}),
 	},
 	-- #{m}: message
 	-- #{s}: source name (defaults to null-ls if not specified)
 	-- #{c}: code (if available)
 	diagnostics_format = "[#{s}] #{m}",
-	on_attach = function(client, bufnr)
-		if client.supports_method("textDocument/formatting") then
-			vim.api.nvim_clear_autocmds({ group = augroup, buffer = bufnr })
-			vim.api.nvim_create_autocmd("BufWritePre", {
-				group = augroup,
-				buffer = bufnr,
-				callback = function()
-					lsp_formatting(bufnr)
-				end,
-			})
-		end
-
+	on_attach = function(_)
 		vim.cmd([[ command! Format execute 'lua vim.lsp.buf.formatting()']])
+		-- if client.resolved_capabilities.document_formatting then
+		--   vim.cmd("autocmd BufWritePre <buffer> lua vim.lsp.buf.formatting_sync()")
+		-- end
 	end,
 })
