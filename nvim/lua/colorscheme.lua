@@ -14,7 +14,11 @@ require("github-theme").setup({
       -- this will remove the highlight groups
       TSField = {},
     }
-  end
+  end,
+  -- 透明背景
+  transparent = false,
+  -- dark floating background
+  dark_float = true,
 })
 local colorscheme = "github_*"
 local status_ok, _ = pcall(vim.cmd, "colorscheme " .. colorscheme)

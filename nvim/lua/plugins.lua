@@ -95,7 +95,7 @@ packer.startup({
     use("ur4ltz/surround.nvim")
     -- indent-blankline
     use("lukas-reineke/indent-blankline.nvim")
-  -- git
+    -- git
     use({ "lewis6991/gitsigns.nvim" })
   end,
   config = {
