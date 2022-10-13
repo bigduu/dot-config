@@ -95,6 +95,13 @@ pluginKeys.comment = {
   },
 }
 
+-- typescript
+pluginKeys.mapTsLSP = function(mapbuf)
+  mapbuf("n", "gs", ":TSLspOrganize<CR>", opt)
+  mapbuf("n", "gR", ":TSLspRenameFile<CR>", opt)
+  mapbuf("n", "gi", ":TSLspImportAll<CR>", opt)
+end
+
 -- gitsigns
 pluginKeys.gitsigns_on_attach = function(bufnr)
   local gs = package.loaded.gitsigns
@@ -106,44 +113,40 @@ pluginKeys.gitsigns_on_attach = function(bufnr)
   end
 
   -- Navigation
-  map("n", "<leader>gj", function()
-    if vim.wo.diff then
-      return "]c"
-    end
-    vim.schedule(function()
-      gs.next_hunk()
-    end)
-    return "<Ignore>"
-  end, { expr = true })
+  -- map("n", "<leader>gj", function()
+  --   if vim.wo.diff then
+  --     return "]c"
+  --   end
+  --   vim.schedule(function()
+  --     gs.next_hunk()
+  --   end)
+  --   return "<Ignore>"
+  -- end, { expr = true })
+  --
+  -- map("n", "<leader>gk", function()
+  --   if vim.wo.diff then
+  --     return "[c"
+  --   end
+  --   vim.schedule(function()
+  --     gs.prev_hunk()
+  --   end)
+  --   return "<Ignore>"
+  -- end, { expr = true })
 
-  map("n", "<leader>gk", function()
-    if vim.wo.diff then
-      return "[c"
-    end
-    vim.schedule(function()
-      gs.prev_hunk()
-    end)
-    return "<Ignore>"
-  end, { expr = true })
-
-  map({ "n", "v" }, "<leader>gs", ":Gitsigns stage_hunk<CR>")
-  map("n", "<leader>gS", gs.stage_buffer)
-  map("n", "<leader>gu", gs.undo_stage_hunk)
-  map({ "n", "v" }, "<leader>gr", ":Gitsigns reset_hunk<CR>")
-  map("n", "<leader>gR", gs.reset_buffer)
-  map("n", "<leader>gp", gs.preview_hunk)
-  map("n", "<leader>gb", function()
-    gs.blame_line({ full = true })
-  end)
-  map("n", "<leader>gd", gs.diffthis)
-  map("n", "<leader>gD", function()
-    gs.diffthis("~")
-  end)
-  -- toggle
-  map("n", "<leader>gtd", gs.toggle_deleted)
-  map("n", "<leader>gtb", gs.toggle_current_line_blame)
+  -- map({ "n", "v" }, "<leader>gs", ":Gitsigns stage_hunk<CR>")
+  -- map("n", "<leader>gS", gs.stage_buffer)
+  -- map("n", "<leader>gu", gs.undo_stage_hunk)
+  -- map({ "n", "v" }, "<leader>gr", ":Gitsigns reset_hunk<CR>")
+  -- map("n", "<leader>gR", gs.reset_buffer)
+  -- map("n", "<leader>gp", gs.preview_hunk)
+  -- map("n", "<leader>gb", function() gs.blame_line({ full = true }) end)
+  -- map("n", "<leader>gd", gs.diffthis)
+  -- map("n", "<leader>gD", function() gs.diffthis("~") end)
+  -- -- toggle
+  -- map("n", "<leader>gtd", gs.toggle_deleted)
+  -- map("n", "<leader>gtb", gs.toggle_current_line_blame)
   -- Text object
-  map({ "o", "x" }, "ig", ":<C-U>Gitsigns select_hunk<CR>")
+  -- map({ "o", "x" }, "ig", ":<C-U>Gitsigns select_hunk<CR>")
 end
 
 -- nvim-cmp
