@@ -100,6 +100,11 @@ _G.packer_plugins = {
     path = "/Users/bigduu/.local/share/nvim/site/pack/packer/start/cmp-cmdline",
     url = "https://github.com/hrsh7th/cmp-cmdline"
   },
+  ["cmp-look"] = {
+    loaded = true,
+    path = "/Users/bigduu/.local/share/nvim/site/pack/packer/start/cmp-look",
+    url = "https://github.com/octaltree/cmp-look"
+  },
   ["cmp-nvim-lsp"] = {
     loaded = true,
     path = "/Users/bigduu/.local/share/nvim/site/pack/packer/start/cmp-nvim-lsp",
@@ -201,10 +206,10 @@ _G.packer_plugins = {
     path = "/Users/bigduu/.local/share/nvim/site/pack/packer/start/lspkind-nvim",
     url = "https://github.com/onsails/lspkind-nvim"
   },
-  ["lua-dev.nvim"] = {
+  ["lspsaga.nvim"] = {
     loaded = true,
-    path = "/Users/bigduu/.local/share/nvim/site/pack/packer/start/lua-dev.nvim",
-    url = "https://github.com/folke/lua-dev.nvim"
+    path = "/Users/bigduu/.local/share/nvim/site/pack/packer/start/lspsaga.nvim",
+    url = "https://github.com/glepnir/lspsaga.nvim"
   },
   ["lualine-lsp-progress"] = {
     loaded = true,
@@ -220,6 +225,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/bigduu/.local/share/nvim/site/pack/packer/start/markdown-preview.nvim",
     url = "https://github.com/iamcco/markdown-preview.nvim"
+  },
+  ["neodev.nvim"] = {
+    loaded = true,
+    path = "/Users/bigduu/.local/share/nvim/site/pack/packer/start/neodev.nvim",
+    url = "https://github.com/folke/neodev.nvim"
   },
   ["nui.nvim"] = {
     loaded = true,
@@ -372,14 +382,14 @@ _G.packer_plugins = {
 }
 
 time([[Defining packer_plugins]], false)
--- Config for: crates.nvim
-time([[Config for crates.nvim]], true)
-try_loadstring("\27LJ\2\n4\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\vcrates\frequire\0", "config", "crates.nvim")
-time([[Config for crates.nvim]], false)
 -- Config for: Comment.nvim
 time([[Config for Comment.nvim]], true)
 try_loadstring("\27LJ\2\n5\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\fComment\frequire\0", "config", "Comment.nvim")
 time([[Config for Comment.nvim]], false)
+-- Config for: crates.nvim
+time([[Config for crates.nvim]], true)
+try_loadstring("\27LJ\2\n4\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\vcrates\frequire\0", "config", "crates.nvim")
+time([[Config for crates.nvim]], false)
 
 -- Command lazy-loads
 time([[Defining lazy-load commands]], true)

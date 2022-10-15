@@ -14,31 +14,22 @@ packer.startup({
     use("b0o/schemastore.nvim")
     use({ "jose-elias-alvarez/nvim-lsp-ts-utils", requires = "nvim-lua/plenary.nvim" })
     -- treesitter
-    use({
-      "nvim-treesitter/nvim-treesitter",
-      run = ":TSUpdate",
-    })
-    use("p00f/nvim-ts-rainbow")
+    use({ "nvim-treesitter/nvim-treesitter", run = ":TSUpdate" })
     --nord theme
     use("projekt0n/github-nvim-theme")
+    use("p00f/nvim-ts-rainbow")
+    use("onsails/lspkind-nvim")
+    use({
+      "glepnir/lspsaga.nvim",
+      branch = "main",
+    })
     -- nvim-tree
     use({ "kyazdani42/nvim-tree.lua", requires = { "kyazdani42/nvim-web-devicons" } })
-    use({ "nvim-treesitter/nvim-treesitter", run = ":TSUpdate" })
     use({ "akinsho/bufferline.nvim", requires = "kyazdani42/nvim-web-devicons" })
+    -- lsp
     use({ "neovim/nvim-lspconfig", "williamboman/nvim-lsp-installer" })
+    -- cmp
     use("hrsh7th/nvim-cmp")
-    --For vsnip users.
-    use("hrsh7th/cmp-vsnip")
-    use("hrsh7th/vim-vsnip")
-    -- Lua 增强
-    use("folke/lua-dev.nvim")
-
-    --For ultisnips users.
-    use("SirVer/ultisnips")
-    use("quangnguyen30192/cmp-nvim-ultisnips")
-
-    --For snippy users.
-    use("dcampos/nvim-snippy")
     use("dcampos/cmp-snippy")
     use("hrsh7th/cmp-nvim-lsp")
     use("hrsh7th/cmp-nvim-lua")
@@ -46,8 +37,18 @@ packer.startup({
     use("hrsh7th/cmp-path")
     use("hrsh7th/cmp-cmdline")
     use("f3fora/cmp-spell")
+    use("octaltree/cmp-look")
+    --For vsnip users.
+    use("hrsh7th/cmp-vsnip")
+    use("hrsh7th/vim-vsnip")
+    -- Lua 增强
+    use "folke/neodev.nvim"
+    --For ultisnips users.
+    use("SirVer/ultisnips")
+    use("quangnguyen30192/cmp-nvim-ultisnips")
+    use("dcampos/nvim-snippy")
     use("rafamadriz/friendly-snippets")
-    use("onsails/lspkind-nvim")
+
     use({ "scalameta/nvim-metals", requires = { "nvim-lua/plenary.nvim", "mfussenegger/nvim-dap" } })
     use({ "jose-elias-alvarez/null-ls.nvim", requires = "nvim-lua/plenary.nvim" })
     use({ "nvim-telescope/telescope.nvim", requires = { "nvim-lua/plenary.nvim" } })
@@ -55,7 +56,6 @@ packer.startup({
     use("ahmedkhalf/project.nvim")
     use("windwp/nvim-autopairs")
     use({ "VonHeikemen/fine-cmdline.nvim", requires = { { "MunifTanjim/nui.nvim" } } })
-    use("rust-lang/rust.vim")
     use("simrat39/rust-tools.nvim")
     use("mfussenegger/nvim-dap")
     use("theHamsta/nvim-dap-virtual-text")
@@ -73,6 +73,8 @@ packer.startup({
     use({ "phaazon/hop.nvim" })
     -- pupup window for code action
     use({ "weilbith/nvim-code-action-menu", cmd = "CodeActionMenu" })
+    -- rust
+    use("rust-lang/rust.vim")
     -- rust crates
     use({
       "saecki/crates.nvim",

@@ -7,6 +7,7 @@ require("lsp.null-ls")
 require("lsp.crates")
 require("lsp.tabnine")
 require("lsp.ui")
+require("lsp.lsp-saga")
 
 local lspconfig = require("lspconfig")
 

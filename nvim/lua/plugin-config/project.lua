@@ -15,7 +15,6 @@ project.setup({
     ".bzr",
     ".svn",
     "Makefile",
-    "package.json",
     ".sln",
     "gradlew",
     ".idea"

@@ -16,6 +16,7 @@ cmp.setup({
 		{ name = "cmp_tabnine" },
 		{ name = "spell" },
 		{ name = "crates" },
+  {name = "look"}
 	}, {
 		{ name = "buffer" },
 		{ name = "cmp_tabnine" },
@@ -34,6 +35,7 @@ cmp.setup({
 				buffer = "[Buffer]",
 				path = "[Path]",
 				spell = "[Spell]",
+        look = "[Look]",
 			})[entry.source.name]
 			return vim_item
 		end,
