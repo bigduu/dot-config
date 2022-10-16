@@ -51,14 +51,14 @@ packer.startup({
     use("dcampos/nvim-snippy")
     use("rafamadriz/friendly-snippets")
 
-    use({ "scalameta/nvim-metals", requires = { "nvim-lua/plenary.nvim", "mfussenegger/nvim-dap" } })
     use({ "jose-elias-alvarez/null-ls.nvim", requires = "nvim-lua/plenary.nvim" })
     use({ "nvim-telescope/telescope.nvim", requires = { "nvim-lua/plenary.nvim" } })
+    -- dashboard and project
     use("glepnir/dashboard-nvim")
     use("ahmedkhalf/project.nvim")
+
     use("windwp/nvim-autopairs")
     use({ "VonHeikemen/fine-cmdline.nvim", requires = { { "MunifTanjim/nui.nvim" } } })
-    use("simrat39/rust-tools.nvim")
     use("mfussenegger/nvim-dap")
     use("theHamsta/nvim-dap-virtual-text")
     use("rcarriga/nvim-dap-ui")
@@ -76,6 +76,7 @@ packer.startup({
     -- pupup window for code action
     use({ "weilbith/nvim-code-action-menu", cmd = "CodeActionMenu" })
     -- rust
+    use("simrat39/rust-tools.nvim")
     use("rust-lang/rust.vim")
     -- rust crates
     use({
