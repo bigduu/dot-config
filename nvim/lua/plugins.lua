@@ -27,7 +27,9 @@ packer.startup({
     use({ "kyazdani42/nvim-tree.lua", requires = { "kyazdani42/nvim-web-devicons" } })
     use({ "akinsho/bufferline.nvim", requires = "kyazdani42/nvim-web-devicons" })
     -- lsp
-    use({ "neovim/nvim-lspconfig", "williamboman/nvim-lsp-installer" })
+    use({ "williamboman/mason.nvim" })
+    use({ "williamboman/mason-lspconfig.nvim" })
+    use({ "neovim/nvim-lspconfig"})
     -- cmp
     use("hrsh7th/nvim-cmp")
     use("dcampos/cmp-snippy")
