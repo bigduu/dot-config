@@ -5,6 +5,8 @@ require("plugin-config.plugins-collection")
 require("colorscheme")
 require("lsp.setup")
 
+require("test")
+
 vim.api.nvim_command("filetype plugin indent on")
 
 vim.opt.showmatch = true
