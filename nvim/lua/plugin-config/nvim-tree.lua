@@ -57,7 +57,7 @@ nvim_tree.setup { -- BEGIN_DEFAULT_OPTS
     args = {},
   },
   diagnostics = {
-    enable = true,
+    enable = flase,
     show_on_dirs = true,
     -- icons = {
     --   hint = "h",

@@ -37,7 +37,8 @@ require("lsp.null-ls")
 require("lsp.crates")
 require("lsp.tabnine")
 require("lsp.ui")
-require("lsp.lsp-saga")
+-- require("lsp.lsp-saga")
+require("lsp.outline")
 
 local lspconfig = require("lspconfig")
 

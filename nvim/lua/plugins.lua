@@ -6,6 +6,9 @@ packer.startup({
     -- git tools
     use("APZelos/blamer.nvim")
     use({ "sindrets/diffview.nvim", requires = "nvim-lua/plenary.nvim" })
+    use("yamatsum/nvim-cursorline")
+    -- outline
+    use("simrat39/symbols-outline.nvim")
     -- lualine
     use({ "nvim-lualine/lualine.nvim", requires = { "kyazdani42/nvim-web-devicons" } })
     use("arkav/lualine-lsp-progress")
@@ -16,13 +19,16 @@ packer.startup({
     -- treesitter
     use({ "nvim-treesitter/nvim-treesitter", run = ":TSUpdate" })
     --nord theme
+    use("folke/tokyonight.nvim")
     use("projekt0n/github-nvim-theme")
     use("p00f/nvim-ts-rainbow")
     use("onsails/lspkind-nvim")
-    use({
-      "glepnir/lspsaga.nvim",
-      branch = "main",
-    })
+    -- use({
+    --   "glepnir/lspsaga.nvim",
+    --   branch = "main",
+    -- })
+    -- color
+    use("NvChad/nvim-colorizer.lua")
     -- nvim-tree
     use({ "kyazdani42/nvim-tree.lua", requires = { "kyazdani42/nvim-web-devicons" } })
     use({ "akinsho/bufferline.nvim", requires = "kyazdani42/nvim-web-devicons" })
