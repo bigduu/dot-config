@@ -29,7 +29,7 @@ packer.startup({
     -- lsp
     use({ "williamboman/mason.nvim" })
     use({ "williamboman/mason-lspconfig.nvim" })
-    use({ "neovim/nvim-lspconfig"})
+    use({ "neovim/nvim-lspconfig" })
     -- cmp
     use("hrsh7th/nvim-cmp")
     use("dcampos/cmp-snippy")
@@ -44,7 +44,7 @@ packer.startup({
     use("hrsh7th/cmp-vsnip")
     use("hrsh7th/vim-vsnip")
     -- Lua 增强
-    use "folke/neodev.nvim"
+    use("folke/neodev.nvim")
     --For ultisnips users.
     use("SirVer/ultisnips")
     use("quangnguyen30192/cmp-nvim-ultisnips")
@@ -59,9 +59,12 @@ packer.startup({
 
     use("windwp/nvim-autopairs")
     use({ "VonHeikemen/fine-cmdline.nvim", requires = { { "MunifTanjim/nui.nvim" } } })
+    -- debugging
     use("mfussenegger/nvim-dap")
     use("theHamsta/nvim-dap-virtual-text")
     use("rcarriga/nvim-dap-ui")
+    use("nvim-lua/plenary.nvim")
+    use("puremourning/vimspector")
     use("mattn/webapi-vim")
     -- code translator
     use("voldikss/vim-translator")

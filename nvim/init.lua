@@ -4,6 +4,7 @@ require("plugins")
 require("plugin-config.plugins-collection")
 require("colorscheme")
 require("lsp.setup")
+require("dap.nvim-dap.init")
 
 vim.api.nvim_command("filetype plugin indent on")
 
