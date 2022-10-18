@@ -54,6 +54,7 @@ local servers = {
   rust_analyzer = require("lsp.config.rust"),
   yamlls = require("lsp.config.yamlls"),
   kotlin_language_server = require("lsp.config.kotlin"),
+  taplo = require("lsp.config.taplo"),
 }
 for name, config in pairs(servers) do
   if config ~= nil and type(config) == "table" then
