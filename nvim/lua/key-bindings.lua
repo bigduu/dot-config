@@ -47,7 +47,7 @@ pluginKeys.mapLSP = function(mapbuf)
   mapbuf("n", "<leader>re", "<cmd>lua vim.lsp.buf.rename()<CR>", opt)
   -- go xx
   mapbuf("n", "gd", ":Telescope lsp_definitions<CR>", opt)
-  mapbuf("n", "gr", ":Telescope lsp_references<CR>", opt)
+  mapbuf("n", "<leader>fu", ":Telescope lsp_references<CR>", opt)
   mapbuf("n", "<leader>gf", ":Telescope find_files<CR>", opt)
   mapbuf("n", "<leader>gi", ":Telescope lsp_implementations<CR>", opt)
   mapbuf("n", "<leader>sp", ":SymbolsOutline<CR>", opt)
