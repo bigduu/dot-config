@@ -123,6 +123,7 @@ packer.startup({
 })
 -- auto install plugin
 pcall(
+---@diagnostic disable-next-line: param-type-mismatch
   vim.cmd,
   [[
 augroup packer_user_config
