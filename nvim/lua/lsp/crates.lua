@@ -28,11 +28,11 @@ require('crates').setup {
     error = "CratesNvimError",
   },
   popup = {
-    autofocus = false,
+    autofocus = true,
     copy_register = '"',
     style = "minimal",
     border = "none",
-    show_version_date = false,
+    show_version_date = true,
     show_dependency_version = true,
     max_height = 30,
     min_width = 20,

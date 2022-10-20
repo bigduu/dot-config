@@ -111,6 +111,8 @@ packer.startup({
     use("lukas-reineke/indent-blankline.nvim")
     -- git
     use({ "lewis6991/gitsigns.nvim" })
+    -- multiple-cursors
+    -- use({"mg979/vim-visual-multi"})
   end,
   config = {
     max_jobs = 15,
