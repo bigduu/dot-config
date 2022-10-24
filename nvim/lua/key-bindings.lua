@@ -37,16 +37,18 @@ map("v", "<leader>tr", ":TranslateW<CR>", opt)
 -- find
 map("n", "<leader>fp", ":Telescope live_grep<CR>", opt)
 
+map("n", "<leader>sp", "<cmd>LSoutlineToggle<CR>", opt)
+
 local pluginKeys = {}
 
 -- maplsp
 pluginKeys.mapLSP = function(mapbuf)
-  mapbuf("n", "K", "Lspsaga hover_doc()<CR>", opt)
+  mapbuf("n", "K", ":Lspsaga hover_doc<CR>", opt)
   --rename
-  mapbuf("n", "<leader>re", "Lspsaga rename()<CR>", opt)
+  mapbuf("n", "<leader>re", ":Lspsaga rename<CR>", opt)
   -- go xx
-  mapbuf("n", "gd", ":Telescope lsp_definitions<CR>", opt)
-  mapbuf("n", "<leader>fu", ":Telescope lsp_references<CR>", opt)
+  mapbuf("n", "gd", ":Lspsaga peek_definition<CR>", opt)
+  mapbuf("n", "<leader>fu", ":Lspsaga lsp_finder<CR>", opt)
   mapbuf("n", "<leader>gf", ":Telescope find_files<CR>", opt)
   mapbuf("n", "<leader>gi", ":Telescope lsp_implementations<CR>", opt)
   mapbuf("n", "<leader>sp", "<cmd>LSoutlineToggle<CR>", opt)
