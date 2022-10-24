@@ -19,6 +19,7 @@ null_ls.setup({
 		-- frontend
 		formatting.prettier.with({ -- 比默认少了 markdown
 			filetypes = {
+        "vue",
 				"javascript",
 				"javascriptreact",
 				"typescript",

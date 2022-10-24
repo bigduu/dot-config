@@ -16,6 +16,7 @@ packer.startup({
     -- front endpoint
     use("b0o/schemastore.nvim")
     use({ "jose-elias-alvarez/nvim-lsp-ts-utils", requires = "nvim-lua/plenary.nvim" })
+    use("windwp/nvim-ts-autotag")
     -- treesitter
     use({ "nvim-treesitter/nvim-treesitter", run = ":TSUpdate" })
     --nord theme

@@ -37,7 +37,6 @@ map("v", "<leader>tr", ":TranslateW<CR>", opt)
 -- find
 map("n", "<leader>fp", ":Telescope live_grep<CR>", opt)
 
-
 local pluginKeys = {}
 
 -- maplsp
@@ -158,6 +157,23 @@ pluginKeys.cmp = function(cmp)
         cmp.complete()
       end
     end, { "i", "s", "c" }),
+    ["<Tab>"] = cmp.mapping(function(fallback)
+      -- This little snippet will confirm with tab, and if no entry is selected, will confirm the first item
+      if cmp.visible() then
+        local entry = cmp.get_selected_entry()
+        if not entry then
+          cmp.select_next_item({ behavior = cmp.SelectBehavior.Select })
+        else
+          cmp.confirm()
+        end
+      else
+        fallback()
+      end
+    end, { "i", "s", "c" }),
+    ["<CR>"] = cmp.mapping.confirm({
+      behavior = cmp.ConfirmBehavior.Replace,
+      select = true,
+    }),
   }
 end
 
@@ -170,11 +186,11 @@ pluginKeys.mapDAP = function()
     "n",
     "<leader>de",
     ":lua require'dap'.close()<CR>"
-      .. ":lua require'dap'.terminate()<CR>"
-      .. ":lua require'dap.repl'.close()<CR>"
-      .. ":lua require'dapui'.close()<CR>"
-      .. ":lua require('dap').clear_breakpoints()<CR>"
-      .. "<C-w>o<CR>",
+    .. ":lua require'dap'.terminate()<CR>"
+    .. ":lua require'dap.repl'.close()<CR>"
+    .. ":lua require'dapui'.close()<CR>"
+    .. ":lua require('dap').clear_breakpoints()<CR>"
+    .. "<C-w>o<CR>",
     opt
   )
   -- 继续

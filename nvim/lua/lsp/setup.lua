@@ -28,6 +28,7 @@ require("mason-lspconfig").setup({
     "taplo",
     "yamlls",
     "gopls",
+    "vuels",
     "kotlin_language_server",
   },
 })
@@ -55,6 +56,7 @@ local servers = {
   yamlls = require("lsp.config.yamlls"),
   kotlin_language_server = require("lsp.config.kotlin"),
   taplo = require("lsp.config.taplo"),
+  vuels = require("lsp.config.vue"),
 }
 for name, config in pairs(servers) do
   if config ~= nil and type(config) == "table" then

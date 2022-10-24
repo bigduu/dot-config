@@ -20,9 +20,28 @@ local lspconfig_opts = {
     -- to enable rust-analyzer settings visit:
     -- https://github.com/rust-analyzer/rust-analyzer/blob/master/docs/user/generated_config.adoc
     ["rust-analyzer"] = {
+      procMacro = {
+        enable = true,
+      },
+      cargo = {
+        loadOutDirsFromCheck = true,
+      },
       -- enable clippy on save
       checkOnSave = {
         command = "clippy",
+      },
+      inlayHints = {
+        maxLength = 500,
+      },
+      lru = {
+        capacity = 512,
+      },
+      workspace = {
+        symbol = {
+          search = {
+            limit = 1000,
+          },
+        },
       },
     },
   },
