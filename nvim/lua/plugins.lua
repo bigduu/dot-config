@@ -7,8 +7,6 @@ packer.startup({
     use("APZelos/blamer.nvim")
     use({ "sindrets/diffview.nvim", requires = "nvim-lua/plenary.nvim" })
     use("yamatsum/nvim-cursorline")
-    -- outline
-    use("simrat39/symbols-outline.nvim")
     -- lualine
     use({ "nvim-lualine/lualine.nvim", requires = { "kyazdani42/nvim-web-devicons" } })
     use("arkav/lualine-lsp-progress")
@@ -24,10 +22,10 @@ packer.startup({
     use("projekt0n/github-nvim-theme")
     use("p00f/nvim-ts-rainbow")
     use("onsails/lspkind-nvim")
-    -- use({
-    --   "glepnir/lspsaga.nvim",
-    --   branch = "main",
-    -- })
+    use({
+      "glepnir/lspsaga.nvim",
+      branch = "main",
+    })
     -- color
     use("NvChad/nvim-colorizer.lua")
     -- nvim-tree
@@ -112,8 +110,6 @@ packer.startup({
     use("lukas-reineke/indent-blankline.nvim")
     -- git
     use({ "lewis6991/gitsigns.nvim" })
-    -- multiple-cursors
-    -- use({"mg979/vim-visual-multi"})
   end,
   config = {
     max_jobs = 15,

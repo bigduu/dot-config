@@ -41,25 +41,25 @@ local pluginKeys = {}
 
 -- maplsp
 pluginKeys.mapLSP = function(mapbuf)
-  mapbuf("n", "K", "<cmd>lua vim.lsp.buf.hover()<CR>", opt)
+  mapbuf("n", "K", "Lspsaga hover_doc()<CR>", opt)
   --rename
-  mapbuf("n", "<leader>re", "<cmd>lua vim.lsp.buf.rename()<CR>", opt)
+  mapbuf("n", "<leader>re", "Lspsaga rename()<CR>", opt)
   -- go xx
   mapbuf("n", "gd", ":Telescope lsp_definitions<CR>", opt)
   mapbuf("n", "<leader>fu", ":Telescope lsp_references<CR>", opt)
   mapbuf("n", "<leader>gf", ":Telescope find_files<CR>", opt)
   mapbuf("n", "<leader>gi", ":Telescope lsp_implementations<CR>", opt)
-  mapbuf("n", "<leader>sp", ":SymbolsOutline<CR>", opt)
+  mapbuf("n", "<leader>sp", "<cmd>LSoutlineToggle<CR>", opt)
   mapbuf("n", "<leader>ic", ":Telescope lsp_incoming_calls<CR>", opt)
   mapbuf("n", "<leader>oc", ":Telescope lsp_outgoing_calls<CR>", opt)
   -- diagnostic
   mapbuf("n", "go", ":Telescope diagnostics<CR>", opt)
-  mapbuf("n", "gp", "<cmd>lua vim.diagnostic.goto_prev()<CR>", opt)
-  mapbuf("n", "gn", "<cmd>lua vim.diagnostic.goto_next()<CR>", opt)
+  mapbuf("n", "gp", "Lspsaga diagnostic_jump_next()<CR>", opt)
+  mapbuf("n", "gn", "Lspsaga diagnostic_jump_prev()<CR>", opt)
   mapbuf("n", "<leader>ff", ":lua vim.lsp.buf.format()<CR>", opt)
   -- code action
   mapbuf("i", "<ctrl><space>", "<cmd>lua vim.lsp.buf.code_action()<CR>", opt)
-  mapbuf("n", "<leader>l", ":CodeActionMenu<CR>", opt)
+  mapbuf("n", "<leader>l", ":Lspsaga code_action<CR>", opt)
 end
 
 pluginKeys.rustMapLSP = function(mapbuf)

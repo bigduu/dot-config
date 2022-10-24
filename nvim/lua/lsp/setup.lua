@@ -1,3 +1,9 @@
+require("lsp.nvim-cmp")
+require("lsp.null-ls")
+require("lsp.crates")
+require("lsp.tabnine")
+require("lsp.ui")
+require("lsp.lsp-saga")
 -- :h mason-default-settings
 require("mason").setup({
   ui = {
@@ -33,13 +39,6 @@ require("mason-lspconfig").setup({
   },
 })
 
-require("lsp.nvim-cmp")
-require("lsp.null-ls")
-require("lsp.crates")
-require("lsp.tabnine")
-require("lsp.ui")
--- require("lsp.lsp-saga")
-require("lsp.outline")
 
 local lspconfig = require("lspconfig")
 
