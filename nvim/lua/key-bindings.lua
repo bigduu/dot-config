@@ -34,10 +34,16 @@ map("n", "<leader>e", ":HopChar2<CR>", opt)
 map("n", "<leader>tr", ":TranslateW<CR>", opt)
 map("v", "<leader>tr", ":TranslateW<CR>", opt)
 
--- find
+-- Telescope
 map("n", "<leader>fp", ":Telescope live_grep<CR>", opt)
+map("n", "<leader>ga", ":Telescope command_palette<CR>", opt)
 
+-- outline
 map("n", "<leader>sp", "<cmd>LSoutlineToggle<CR>", opt)
+
+-- buferline
+map("n", "<leader>x", ":BDelete this<CR>", opt)
+map("n", "<leader>X", ":BDelete other<CR>", opt)
 
 local pluginKeys = {}
 
@@ -56,8 +62,8 @@ pluginKeys.mapLSP = function(mapbuf)
   mapbuf("n", "<leader>oc", ":Telescope lsp_outgoing_calls<CR>", opt)
   -- diagnostic
   mapbuf("n", "go", ":Telescope diagnostics<CR>", opt)
-  mapbuf("n", "gp", "Lspsaga diagnostic_jump_next()<CR>", opt)
-  mapbuf("n", "gn", "Lspsaga diagnostic_jump_prev()<CR>", opt)
+  mapbuf("n", "gp", ":Lspsaga diagnostic_jump_next<CR>", opt)
+  mapbuf("n", "gn", ":Lspsaga diagnostic_jump_prev<CR>", opt)
   mapbuf("n", "<leader>ff", ":lua vim.lsp.buf.format()<CR>", opt)
   -- code action
   mapbuf("i", "<ctrl><space>", "<cmd>lua vim.lsp.buf.code_action()<CR>", opt)

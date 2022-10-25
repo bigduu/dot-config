@@ -5,7 +5,7 @@ if not cmp_status_ok then
 end
 
 cmp.setup({
-  preselect = cmp.PreselectMode.Item,
+  preselect = cmp.PreselectMode.None,
   snippet = {
     expand = function(args)
       vim.fn["vsnip#anonymous"](args.body)
@@ -13,6 +13,7 @@ cmp.setup({
   },
   sources = cmp.config.sources({
     { name = "nvim_lsp" },
+    { name = "nvim_lsp_signature_help" },
     { name = "cmp_tabnine" },
     { name = "spell" },
     { name = "crates" },
@@ -31,6 +32,7 @@ cmp.setup({
     format = function(entry, vim_item)
       vim_item.menu = ({
         cmp_tabnine = "[Tabnine]",
+        nvim_lsp_signature_help = "[LSP_S]",
         nvim_lsp = "[LSP]",
         buffer = "[Buffer]",
         path = "[Path]",

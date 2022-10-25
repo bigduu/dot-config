@@ -31,6 +31,7 @@ packer.startup({
     -- nvim-tree
     use({ "kyazdani42/nvim-tree.lua", requires = { "kyazdani42/nvim-web-devicons" } })
     use({ "akinsho/bufferline.nvim", requires = "kyazdani42/nvim-web-devicons" })
+    use("kazhala/close-buffers.nvim")
     -- lsp
     use({ "williamboman/mason.nvim" })
     use({ "williamboman/mason-lspconfig.nvim" })
@@ -39,6 +40,7 @@ packer.startup({
     use("hrsh7th/nvim-cmp")
     use("dcampos/cmp-snippy")
     use("hrsh7th/cmp-nvim-lsp")
+    use("hrsh7th/cmp-nvim-lsp-signature-help")
     use("hrsh7th/cmp-nvim-lua")
     use("hrsh7th/cmp-buffer")
     use("hrsh7th/cmp-path")
@@ -56,8 +58,11 @@ packer.startup({
     use("dcampos/nvim-snippy")
     use("rafamadriz/friendly-snippets")
 
+    -- formatting
     use({ "jose-elias-alvarez/null-ls.nvim", requires = "nvim-lua/plenary.nvim" })
+    -- telescope
     use({ "nvim-telescope/telescope.nvim", requires = { "nvim-lua/plenary.nvim" } })
+    use({ "LinArcX/telescope-command-palette.nvim" })
     -- dashboard and project
     use("glepnir/dashboard-nvim")
     use("ahmedkhalf/project.nvim")
