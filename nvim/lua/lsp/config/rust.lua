@@ -26,15 +26,23 @@ local lspconfig_opts = {
       cargo = {
         loadOutDirsFromCheck = true,
       },
+      lens = {
+        enable = true,
+        references = {
+          adt = {
+            enable = true,
+          },
+        },
+      },
       -- enable clippy on save
       checkOnSave = {
         command = "clippy",
       },
       inlayHints = {
-        maxLength = 500,
+        maxLength = 1000,
       },
       lru = {
-        capacity = 512,
+        capacity = 1000,
       },
       workspace = {
         symbol = {

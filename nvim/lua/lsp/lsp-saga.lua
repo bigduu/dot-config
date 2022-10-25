@@ -21,11 +21,11 @@ saga.init_lsp_saga({
     auto_refresh = true,
   },
   definition_action_keys = {
-    edit = "<C-c>o",
-    vsplit = "<C-c>v",
-    split = "<C-c>i",
-    tabe = "<C-c>t",
-    quit = "q",
+    edit = "o",
+    vsplit = "<C-i>v",
+    split = "<C-i>i",
+    tabe = "<C-i>t",
+    quit = "<C-c>",
   },
 })
 -- Float terminal
