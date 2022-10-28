@@ -53,7 +53,7 @@ pluginKeys.mapLSP = function(mapbuf)
   --rename
   mapbuf("n", "<leader>re", ":Lspsaga rename<CR>", opt)
   -- go xx
-  mapbuf("n", "gd", ":Lspsaga peek_definition<CR>", opt)
+  mapbuf("n", "gd", "<cmd>lua require'telescope.builtin'.lsp_definitions({ initial_mode = 'insert', })<CR>", opt)
   mapbuf("n", "<leader>fu", ":Lspsaga lsp_finder<CR>", opt)
   mapbuf("n", "<leader>gf", ":Telescope find_files<CR>", opt)
   mapbuf("n", "<leader>gi", ":Telescope lsp_implementations<CR>", opt)
@@ -143,47 +143,6 @@ pluginKeys.gitsigns_on_attach = function(bufnr)
   -- map({ "o", "x" }, "ig", ":<C-U>Gitsigns select_hunk<CR>")
 end
 
--- nvim-cmp
-pluginKeys.cmp = function(cmp)
-  return {
-    ["<C-j>"] = cmp.mapping.scroll_docs(4),
-    ["<C-k>"] = cmp.mapping.scroll_docs(-4),
-    ["<C-e>"] = cmp.mapping.close(),
-    ["<C-p>"] = cmp.mapping.select_prev_item(),
-    ["<C-n>"] = cmp.mapping.select_next_item(),
-    ["<esc>"] = cmp.mapping.abort(),
-    ["<C-Space>"] = cmp.mapping(function(fallback)
-      -- This little snippet will confirm with tab, and if no entry is selected, will confirm the first item
-      if cmp.visible() then
-        local entry = cmp.get_selected_entry()
-        if not entry then
-          cmp.select_next_item({ behavior = cmp.SelectBehavior.Select })
-        else
-          cmp.confirm()
-        end
-      else
-        cmp.complete()
-      end
-    end, { "i", "s", "c" }),
-    ["<Tab>"] = cmp.mapping(function(fallback)
-      -- This little snippet will confirm with tab, and if no entry is selected, will confirm the first item
-      if cmp.visible() then
-        local entry = cmp.get_selected_entry()
-        if not entry then
-          cmp.select_next_item({ behavior = cmp.SelectBehavior.Select })
-        else
-          cmp.confirm()
-        end
-      else
-        fallback()
-      end
-    end, { "i", "s", "c" }),
-    ["<CR>"] = cmp.mapping.confirm({
-      behavior = cmp.ConfirmBehavior.Replace,
-      select = true,
-    }),
-  }
-end
 
 -- nvim-dap
 pluginKeys.mapDAP = function()

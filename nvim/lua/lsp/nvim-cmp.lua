@@ -4,6 +4,56 @@ if not cmp_status_ok then
   return
 end
 
+-- nvim-cmp
+local mapping = function(ncmp)
+  local feedkey = function(key, mode)
+    vim.api.nvim_feedkeys(vim.api.nvim_replace_termcodes(key, true, true, true), mode, true)
+  end
+
+  local has_words_before = function()
+    local line, col = unpack(vim.api.nvim_win_get_cursor(0))
+    return col ~= 0 and vim.api.nvim_buf_get_lines(0, line - 1, line, true)[1]:sub(col, col):match("%s") == nil
+  end
+  return {
+    ["<C-j>"] = ncmp.mapping.scroll_docs(4),
+    ["<C-k>"] = ncmp.mapping.scroll_docs(-4),
+    ["<C-e>"] = ncmp.mapping.close(),
+    ["<C-p>"] = ncmp.mapping.select_prev_item(),
+    ["<C-n>"] = ncmp.mapping.select_next_item(),
+    ["<esc>"] = ncmp.mapping.abort(),
+    ["<C-Space>"] = ncmp.mapping(function(fallback)
+      -- This little snippet will confirm with tab, and if no entry is selected, will confirm the first item
+      if ncmp.visible() then
+        local entry = ncmp.get_selected_entry()
+        if not entry then
+          ncmp.select_next_item({ behavior = ncmp.SelectBehavior.Select })
+        else
+          ncmp.confirm()
+        end
+      else
+        ncmp.complete()
+      end
+    end, { "i", "s", "c" }),
+    ["<Tab>"] = ncmp.mapping(function(fallback)
+      -- This little snippet will confirm with tab, and if no entry is selected, will confirm the first item
+      if ncmp.visible() then
+        local entry = ncmp.get_selected_entry()
+        if not entry then
+          ncmp.select_next_item({ behavior = ncmp.SelectBehavior.Select })
+        else
+          ncmp.confirm()
+        end
+      else
+        fallback()
+      end
+    end, { "i", "s", "c" }),
+    ["<CR>"] = ncmp.mapping.confirm({
+      behavior = ncmp.ConfirmBehavior.Replace,
+      select = true,
+    }),
+  }
+end
+
 cmp.setup({
   preselect = cmp.PreselectMode.None,
   snippet = {
@@ -15,14 +65,15 @@ cmp.setup({
     { name = "nvim_lsp" },
     { name = "nvim_lsp_signature_help" },
     { name = "cmp_tabnine" },
+    { name = "vsnip" },
     { name = "spell" },
+    -- { name = "look" },
     { name = "crates" },
-    { name = "look" },
   }, {
     { name = "buffer" },
     { name = "cmp_tabnine" },
   }),
-  mapping = require("key-bindings").cmp(cmp),
+  mapping = mapping(cmp),
   window = {
     completion = cmp.config.window.bordered(),
     documentation = cmp.config.window.bordered(),
@@ -33,6 +84,7 @@ cmp.setup({
       vim_item.menu = ({
         cmp_tabnine = "[Tabnine]",
         nvim_lsp_signature_help = "[LSP_S]",
+        vsnip = "[Vsnip]",
         nvim_lsp = "[LSP]",
         buffer = "[Buffer]",
         path = "[Path]",

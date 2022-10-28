@@ -18,6 +18,7 @@ packer.startup({
     -- treesitter
     use({ "nvim-treesitter/nvim-treesitter", run = ":TSUpdate" })
     --nord theme
+    use("sainnhe/gruvbox-material")
     use("folke/tokyonight.nvim")
     use("projekt0n/github-nvim-theme")
     use("p00f/nvim-ts-rainbow")
@@ -49,14 +50,16 @@ packer.startup({
     use("octaltree/cmp-look")
     --For vsnip users.
     use("hrsh7th/cmp-vsnip")
-    use("hrsh7th/vim-vsnip")
     -- Lua 增强
     use("folke/neodev.nvim")
-    --For ultisnips users.
+
+    --snip
+    use("hrsh7th/vim-vsnip")
+    use("dcampos/nvim-snippy")
     use("SirVer/ultisnips")
     use("quangnguyen30192/cmp-nvim-ultisnips")
-    use("dcampos/nvim-snippy")
     use("rafamadriz/friendly-snippets")
+
 
     -- formatting
     use({ "jose-elias-alvarez/null-ls.nvim", requires = "nvim-lua/plenary.nvim" })

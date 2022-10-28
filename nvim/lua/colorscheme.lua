@@ -57,7 +57,7 @@ require("tokyonight").setup({
   on_highlights = function(highlights, colors) end,
 })
 
-local colorscheme = "tokyonight"
+local colorscheme = "gruvbox-material"
 local status_ok, _ = pcall(vim.cmd, "colorscheme " .. colorscheme)
 if not status_ok then
   vim.notify("colorscheme " .. colorscheme .. " not find")
