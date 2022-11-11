@@ -76,7 +76,7 @@ local opts = {
       },
 
       -- update imports on file move
-      update_imports_on_move = false,
+      update_imports_on_move = true,
       require_confirmation_on_move = false,
       watch_dir = nil,
     })

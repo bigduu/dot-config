@@ -26,7 +26,7 @@ require("tokyonight").setup({
   -- or leave it empty to use the default settings
   style = "moon", -- The theme comes in three styles, `storm`, `moon`, a darker variant `night` and `day`
   light_style = "night", -- The theme is used when the background is set to light
-  transparent = true, -- Enable this to disable setting the background color
+  transparent = false, -- Enable this to disable setting the background color
   terminal_colors = true, -- Configure the colors used when opening a `:terminal` in Neovim
   styles = {
     -- Style to be applied to different syntax groups
@@ -36,8 +36,8 @@ require("tokyonight").setup({
     functions = {},
     variables = {},
     -- Background styles. Can be "dark", "transparent" or "normal"
-    sidebars = "transparent", -- style for sidebars, see below
-    floats = "transparent", -- style for floating windows
+    sidebars = "dark", -- style for sidebars, see below
+    floats = "dark", -- style for floating windows
   },
   sidebars = { "qf", "vista_kind", "terminal", "packer" },
   day_brightness = 0.5, -- Adjusts the brightness of the colors of the **Day** style. Number between 0 and 1, from dull to vibrant colors
@@ -57,7 +57,7 @@ require("tokyonight").setup({
   on_highlights = function(highlights, colors) end,
 })
 
-local colorscheme = "gruvbox-material"
+local colorscheme = "tokyonight"
 local status_ok, _ = pcall(vim.cmd, "colorscheme " .. colorscheme)
 if not status_ok then
   vim.notify("colorscheme " .. colorscheme .. " not find")

@@ -1,5 +1,5 @@
 # open terminal
-alt - return : open -a /Applications/iTerm.app
+# alt - return : open -a /Applications/iTerm.app
 # reload config
 alt - w : yabai -m window --close; yabai -m window --focus prev
 
