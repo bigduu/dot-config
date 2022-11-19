@@ -13,8 +13,8 @@ map("i", "jj", "<ESC>", opt)
 
 map("n", "H", ":BufferLineCyclePrev<CR>", opt)
 map("n", "L", ":BufferLineCycleNext<CR>", opt)
-map("n", "<C-H>", ":BufferLineMovePrev<CR>", opt)
-map("n", "<C-L>", ":BufferLineMoveNext<CR>", opt)
+map("n", "<C-S-h>", ":BufferLineMovePrev<CR>", opt)
+map("n", "<C-S-l>", ":BufferLineMoveNext<CR>", opt)
 
 map("n", "<Tab>", "%", opt)
 
@@ -62,8 +62,8 @@ pluginKeys.mapLSP = function(mapbuf)
   mapbuf("n", "<leader>oc", ":Telescope lsp_outgoing_calls<CR>", opt)
   -- diagnostic
   mapbuf("n", "go", ":Telescope diagnostics<CR>", opt)
-  mapbuf("n", "gp", ":Lspsaga diagnostic_jump_next<CR>", opt)
-  mapbuf("n", "gn", ":Lspsaga diagnostic_jump_prev<CR>", opt)
+  mapbuf("n", "gn", ":Lspsaga diagnostic_jump_next<CR>", opt)
+  mapbuf("n", "gp", ":Lspsaga diagnostic_jump_prev<CR>", opt)
   mapbuf("n", "<leader>ff", ":lua vim.lsp.buf.format()<CR>", opt)
   -- code action
   mapbuf("i", "<ctrl><space>", "<cmd>lua vim.lsp.buf.code_action()<CR>", opt)
