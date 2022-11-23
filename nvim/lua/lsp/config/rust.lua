@@ -38,17 +38,41 @@ local lspconfig_opts = {
       checkOnSave = {
         command = "clippy",
       },
+      typing = {
+        autoClosingAngleBrackets = {
+          enable = true,
+        },
+      },
       inlayHints = {
-        maxLength = 1000,
+        maxLength = 99999,
+        minLines = 0,
+        bindingModeHints = {
+          enable = true,
+        },
+        closureReturnTypeHints = {
+          enable = true,
+        },
+        expressionAdjustmentHints = {
+          enable = true,
+        },
+        lifetimeElisionHints = {
+          enable = true,
+          useParameterNames = true,
+        },
       },
       lru = {
-        capacity = 1000,
+        capacity = 99999,
       },
       workspace = {
         symbol = {
           search = {
-            limit = 1000,
+            limit = 99999,
           },
+        },
+      },
+      diagnostics = {
+        experimental = {
+          enable = true,
         },
       },
     },

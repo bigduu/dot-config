@@ -27,6 +27,8 @@ packer.startup({
       "glepnir/lspsaga.nvim",
       branch = "main",
     })
+    -- outline
+    use("simrat39/symbols-outline.nvim")
     -- color
     use("NvChad/nvim-colorizer.lua")
     -- nvim-tree

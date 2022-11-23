@@ -14,6 +14,7 @@ require("mason").setup({
     },
   },
 })
+require("lsp.outline")
 
 -- mason-lspconfig uses the `lspconfig` server names in the APIs it exposes - not `mason.nvim` package names
 -- https://github.com/williamboman/mason-lspconfig.nvim/blob/main/doc/server-mapping.md
