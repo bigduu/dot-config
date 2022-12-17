@@ -54,9 +54,9 @@ pluginKeys.mapLSP = function(mapbuf)
   mapbuf("n", "<leader>re", ":Lspsaga rename<CR>", opt)
   -- go xx
   mapbuf("n", "gd", "<cmd>lua require'telescope.builtin'.lsp_definitions({ initial_mode = 'insert', })<CR>", opt)
-  mapbuf("n", "<leader>fu", ":Lspsaga lsp_finder<CR>", opt)
-  mapbuf("n", "<leader>gf", ":Telescope find_files<CR>", opt)
-  mapbuf("n", "<leader>gi", ":Lspsaga lsp_finder<CR>", opt)
+  mapbuf("n", "fu", ":Lspsaga lsp_finder<CR>", opt)
+  mapbuf("n", "gf", ":Telescope find_files<CR>", opt)
+  mapbuf("n", "gi", ":Lspsaga lsp_finder<CR>", opt)
   mapbuf("n", "<leader>sp", ":SymbolsOutline<CR>", opt)
   mapbuf("n", "<leader>ic", ":Telescope lsp_incoming_calls<CR>", opt)
   mapbuf("n", "<leader>oc", ":Telescope lsp_outgoing_calls<CR>", opt)
@@ -65,7 +65,7 @@ pluginKeys.mapLSP = function(mapbuf)
   mapbuf("n", "gn", ":Lspsaga diagnostic_jump_next<CR>", opt)
   mapbuf("n", "gl", ":Lspsaga show_cursor_diagnostics<CR>", opt)
   mapbuf("n", "gp", ":Lspsaga diagnostic_jump_prev<CR>", opt)
-  mapbuf("n", "<leader>ff", ":lua vim.lsp.buf.format()<CR>", opt)
+  mapbuf("n", "<leader>ff", ":lua vim.lsp.buf.format()<CR>:w<CR>", opt)
   -- code action
   mapbuf("i", "<ctrl><space>", "<cmd>lua vim.lsp.buf.code_action()<CR>", opt)
   mapbuf("n", "<leader>l", ":Lspsaga code_action<CR>", opt)
@@ -143,7 +143,6 @@ pluginKeys.gitsigns_on_attach = function(bufnr)
   -- Text object
   -- map({ "o", "x" }, "ig", ":<C-U>Gitsigns select_hunk<CR>")
 end
-
 
 -- nvim-dap
 pluginKeys.mapDAP = function()

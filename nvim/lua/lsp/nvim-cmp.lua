@@ -34,19 +34,6 @@ local mapping = function(ncmp)
         ncmp.complete()
       end
     end, { "i", "s", "c" }),
-    ["<Tab>"] = ncmp.mapping(function(fallback)
-      -- This little snippet will confirm with tab, and if no entry is selected, will confirm the first item
-      if ncmp.visible() then
-        local entry = ncmp.get_selected_entry()
-        if not entry then
-          ncmp.select_next_item({ behavior = ncmp.SelectBehavior.Select })
-        else
-          ncmp.confirm()
-        end
-      else
-        fallback()
-      end
-    end, { "i", "s", "c" }),
     ["<CR>"] = ncmp.mapping.confirm({
       behavior = ncmp.ConfirmBehavior.Replace,
       select = true,
@@ -101,18 +88,6 @@ cmp.setup.cmdline("/", {
   mapping = cmp.mapping.preset.cmdline({
     ["<C-k>"] = cmp.mapping.select_prev_item(),
     ["<C-j>"] = cmp.mapping.select_next_item(),
-    ["<Tab>"] = cmp.mapping(function(fallback)
-      if cmp.visible() then
-        local entry = cmp.get_selected_entry()
-        if not entry then
-          cmp.select_next_item({ behavior = cmp.SelectBehavior.Select })
-        else
-          cmp.confirm()
-        end
-      else
-        fallback()
-      end
-    end, { "i", "s", "c" }),
   }),
   sources = {
     { name = "buffer" },
@@ -124,18 +99,6 @@ cmp.setup.cmdline(":", {
   mapping = cmp.mapping.preset.cmdline({
     ["<C-k>"] = cmp.mapping.select_prev_item(),
     ["<C-j>"] = cmp.mapping.select_next_item(),
-    ["<Tab>"] = cmp.mapping(function(fallback)
-      if cmp.visible() then
-        local entry = cmp.get_selected_entry()
-        if not entry then
-          cmp.select_next_item({ behavior = cmp.SelectBehavior.Select })
-        else
-          cmp.confirm()
-        end
-      else
-        fallback()
-      end
-    end, { "i", "s", "c" }),
   }),
   sources = cmp.config.sources({
     { name = "cmdline" },

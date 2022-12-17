@@ -14,7 +14,7 @@ local lspconfig_opts = {
     -- 绑定快捷键
     require("key-bindings").mapLSP(buf_set_keymap)
     local rt = require("rust-tools")
-    vim.keymap.set("n", "<C-space>", rt.hover_actions.hover_actions, { buffer = bufnr })
+    vim.keymap.set("n", "<Leader>r", rt.hover_actions.hover_actions, { buffer = bufnr })
   end,
   settings = {
     -- to enable rust-analyzer settings visit:

@@ -39,6 +39,7 @@ packer.startup({
     use({ "williamboman/mason.nvim" })
     use({ "williamboman/mason-lspconfig.nvim" })
     use({ "neovim/nvim-lspconfig" })
+    use("mfussenegger/nvim-jdtls")
     -- cmp
     use("hrsh7th/nvim-cmp")
     use("dcampos/cmp-snippy")
@@ -61,7 +62,6 @@ packer.startup({
     use("SirVer/ultisnips")
     use("quangnguyen30192/cmp-nvim-ultisnips")
     use("rafamadriz/friendly-snippets")
-
 
     -- formatting
     use({ "jose-elias-alvarez/null-ls.nvim", requires = "nvim-lua/plenary.nvim" })
