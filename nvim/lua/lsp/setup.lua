@@ -58,6 +58,7 @@ local servers = {
   taplo = require("lsp.config.taplo"),
   vuels = require("lsp.config.vue"),
   jdtls = require("lsp.config.java"),
+  gopls = require("lsp.config.go"),
 }
 for name, config in pairs(servers) do
   if config ~= nil and type(config) == "table" then

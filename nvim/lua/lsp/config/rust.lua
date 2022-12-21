@@ -52,12 +52,15 @@ local lspconfig_opts = {
         closureReturnTypeHints = {
           enable = true,
         },
-        expressionAdjustmentHints = {
-          enable = true,
-        },
         lifetimeElisionHints = {
-          enable = true,
+          enable = "always",
           useParameterNames = true,
+        },
+        closureReturnTypeHint = {
+          enable = "always",
+        },
+        expressionAdjustmentHints = {
+          enable = "always",
         },
       },
       lru = {
