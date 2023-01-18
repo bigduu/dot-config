@@ -53,7 +53,8 @@ pluginKeys.mapLSP = function(mapbuf)
   --rename
   mapbuf("n", "<leader>re", ":Lspsaga rename<CR>", opt)
   -- go xx
-  mapbuf("n", "gd", "<cmd>lua require'telescope.builtin'.lsp_definitions({ initial_mode = 'insert', })<CR>", opt)
+  -- mapbuf("n", "gd", "<cmd>lua require'telescope.builtin'.lsp_definitions({ initial_mode = 'insert', })<CR>", opt)
+  mapbuf("n", "gd", ":Lspsaga goto_definition<CR>", opt)
   mapbuf("n", "fu", ":Lspsaga lsp_finder<CR>", opt)
   mapbuf("n", "gf", ":Telescope find_files<CR>", opt)
   mapbuf("n", "gi", ":Lspsaga lsp_finder<CR>", opt)

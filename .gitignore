@@ -6,3 +6,7 @@ configstore/
 iterm2/
 .DS_Store
 tmux/plugins
+Ryujinx/
+Ryujinx/*
+sketchybar
+sketchybar/*

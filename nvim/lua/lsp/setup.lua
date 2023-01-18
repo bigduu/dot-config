@@ -38,6 +38,7 @@ require("mason-lspconfig").setup({
     "vuels",
     "jdtls",
     "kotlin_language_server",
+    "clangd",
   },
 })
 
@@ -59,6 +60,7 @@ local servers = {
   vuels = require("lsp.config.vue"),
   jdtls = require("lsp.config.java"),
   gopls = require("lsp.config.go"),
+  clangd = require("lsp.config.clangd"),
 }
 for name, config in pairs(servers) do
   if config ~= nil and type(config) == "table" then

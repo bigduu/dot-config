@@ -94,7 +94,8 @@ packer.startup({
     -- pupup window for code action
     use({ "weilbith/nvim-code-action-menu", cmd = "CodeActionMenu" })
     -- rust
-    use("simrat39/rust-tools.nvim")
+    use("kdarkhan/rust-tools.nvim")
+    -- use("simrat39/rust-tools.nvim")
     use("rust-lang/rust.vim")
     -- rust crates
     use({

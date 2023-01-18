@@ -1,6 +1,6 @@
 local keymap = vim.keymap.set
 local saga = require("lspsaga")
-saga.init_lsp_saga({
+saga.setup({
   border_style = "rounded",
   code_action_keys = {
     quit = "<C-c>",
@@ -19,6 +19,16 @@ saga.init_lsp_saga({
     jump_key = "o",
     -- auto refresh when change buffer
     auto_refresh = true,
+  },
+  diagnostic = {
+    show_code_action = true,
+    show_source = true,
+    jump_num_shortcut = true,
+    keys = {
+      exec_action = "o",
+      quit = "q",
+      go_action = "i",
+    },
   },
   definition_action_keys = {
     edit = "o",
