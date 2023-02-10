@@ -39,7 +39,7 @@ require("mason-lspconfig").setup({
         "jdtls",
         "kotlin_language_server",
         "clangd",
-        "svelte_language_server",
+        "svelte",
     },
 })
 
@@ -62,7 +62,7 @@ local servers = {
     jdtls = require("lsp.config.java"),
     gopls = require("lsp.config.go"),
     clangd = require("lsp.config.clangd"),
-    svelte_language_server = require("lsp.config.svelte"),
+    svelte = require("lsp.config.svelte"),
 }
 for name, config in pairs(servers) do
   if config ~= nil and type(config) == "table" then
