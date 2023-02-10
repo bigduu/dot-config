@@ -16,7 +16,7 @@ map("n", "L", ":BufferLineCycleNext<CR>", opt)
 map("n", "<C-S-h>", ":BufferLineMovePrev<CR>", opt)
 map("n", "<C-S-l>", ":BufferLineMoveNext<CR>", opt)
 
-map("n", "<Tab>", "%", opt)
+-- map("n", "<Tab>", "%", opt)
 
 map("n", "<leader>v", ":NvimTreeFindFile<CR>", opt)
 map("n", "<leader>w", ":NvimTreeToggle<CR>", opt)

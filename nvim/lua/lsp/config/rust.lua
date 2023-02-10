@@ -75,7 +75,7 @@ local lspconfig_opts = {
       },
       diagnostics = {
         experimental = {
-          enable = true,
+          enable = false,
         },
       },
     },

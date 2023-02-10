@@ -1,24 +1,25 @@
-local status, nvim_tree = pcall(require, "nvim-tree")
-if not status then
-  vim.notify("can not find nvim-tree")
-  return
-end
+-- local status, nvim_tree = pcall(require, "nvim-tree")
+-- if not status then
+--   vim.notify("can not find nvim-tree")
+--   return
+-- end
+local nvim_tree = require("nvim-tree")
 
-nvim_tree.setup { -- BEGIN_DEFAULT_OPTS
+nvim_tree.setup({ -- BEGIN_DEFAULT_OPTS
   auto_reload_on_write = true,
   disable_netrw = false,
   hijack_cursor = true,
   hijack_netrw = true,
   hijack_unnamed_buffer_when_opening = false,
-  ignore_buffer_on_setup = false,
-  open_on_setup = true,
-  open_on_setup_file = true,
-  open_on_tab = true,
+  ignore_buffer_on_setup = true,
+  open_on_setup = false,
+  open_on_setup_file = false,
+  open_on_tab = false,
   sort_by = "name",
   update_cwd = true,
   update_focused_file = {
     enable = true,
-    update_cwd = true
+    update_cwd = true,
   },
   view = {
     width = "20%",
@@ -36,8 +37,8 @@ nvim_tree.setup { -- BEGIN_DEFAULT_OPTS
       },
     },
     float = {
-      enable = false
-    }
+      enable = false,
+    },
   },
   renderer = {
     indent_markers = {
@@ -45,7 +46,7 @@ nvim_tree.setup { -- BEGIN_DEFAULT_OPTS
     },
     icons = {
       webdev_colors = true,
-    }
+    },
   },
   hijack_directories = {
     enable = true,
@@ -57,7 +58,7 @@ nvim_tree.setup { -- BEGIN_DEFAULT_OPTS
     args = {},
   },
   diagnostics = {
-    enable = flase,
+    enable = true,
     show_on_dirs = true,
     -- icons = {
     --   hint = "h",
@@ -73,7 +74,7 @@ nvim_tree.setup { -- BEGIN_DEFAULT_OPTS
   },
   git = {
     enable = true,
-    ignore = true,
+    ignore = false,
     timeout = 400,
   },
   actions = {
@@ -84,7 +85,7 @@ nvim_tree.setup { -- BEGIN_DEFAULT_OPTS
       restrict_above_cwd = true,
     },
     open_file = {
-      quit_on_open = false,
+      quit_on_open = true,
       resize_window = true,
       window_picker = {
         enable = true,
@@ -112,7 +113,7 @@ nvim_tree.setup { -- BEGIN_DEFAULT_OPTS
       profile = false,
     },
   },
-} -- END_DEFAULT_OPTS
+}) -- END_DEFAULT_OPTS
 
 vim.cmd([[
 autocmd BufEnter * ++nested if winnr('$') == 1 && bufname() == 'NvimTree_' . tabpagenr() | quit | endif

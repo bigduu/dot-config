@@ -1,53 +1,36 @@
-local status, db = pcall(require, "dashboard")
-if not status then
-  vim.notify("没有找到 dashboard")
-  return
-end
+-- local status, db = pcall(require, "dashboard")
+-- if not status then
+--   vim.notify("没有找到 dashboard")
+--   return
+-- end
+local db = require("dashboard")
 
-db.custom_footer = {
-  "",
-  "",
-  -- "https://github.com/nshen/learn-neovim-lua",
-}
-
-db.custom_header = {
-  [[]],
-  [[ ⣇⣿⠘⣿⣿⣿⡿⡿⣟⣟⢟⢟⢝⠵⡝⣿⡿⢂⣼⣿⣷⣌⠩⡫⡻⣝⠹⢿⣿⣷ ]],
-  [[ ⡆⣿⣆⠱⣝⡵⣝⢅⠙⣿⢕⢕⢕⢕⢝⣥⢒⠅⣿⣿⣿⡿⣳⣌⠪⡪⣡⢑⢝⣇ ]],
-  [[ ⡆⣿⣿⣦⠹⣳⣳⣕⢅⠈⢗⢕⢕⢕⢕⢕⢈⢆⠟⠋⠉⠁⠉⠉⠁⠈⠼⢐⢕⢽ ]],
-  [[ ⡗⢰⣶⣶⣦⣝⢝⢕⢕⠅⡆⢕⢕⢕⢕⢕⣴⠏⣠⡶⠛⡉⡉⡛⢶⣦⡀⠐⣕⢕ ]],
-  [[ ⡝⡄⢻⢟⣿⣿⣷⣕⣕⣅⣿⣔⣕⣵⣵⣿⣿⢠⣿⢠⣮⡈⣌⠨⠅⠹⣷⡀⢱⢕ ]],
-  [[ ⡝⡵⠟⠈⢀⣀⣀⡀⠉⢿⣿⣿⣿⣿⣿⣿⣿⣼⣿⢈⡋⠴⢿⡟⣡⡇⣿⡇⡀⢕ ]],
-  [[ ⡝⠁⣠⣾⠟⡉⡉⡉⠻⣦⣻⣿⣿⣿⣿⣿⣿⣿⣿⣧⠸⣿⣦⣥⣿⡇⡿⣰⢗⢄ ]],
-  [[ ⠁⢰⣿⡏⣴⣌⠈⣌⠡⠈⢻⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣬⣉⣉⣁⣄⢖⢕⢕⢕ ]],
-  [[ ⡀⢻⣿⡇⢙⠁⠴⢿⡟⣡⡆⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣷⣵⣵⣿ ]],
-  [[ ⡻⣄⣻⣿⣌⠘⢿⣷⣥⣿⠇⣿⣿⣿⣿⣿⣿⠛⠻⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿ ]],
-  [[ ⣷⢄⠻⣿⣟⠿⠦⠍⠉⣡⣾⣿⣿⣿⣿⣿⣿⢸⣿⣦⠙⣿⣿⣿⣿⣿⣿⣿⣿⠟ ]],
-  [[ ⡕⡑⣑⣈⣻⢗⢟⢞⢝⣻⣿⣿⣿⣿⣿⣿⣿⠸⣿⠿⠃⣿⣿⣿⣿⣿⣿⡿⠁⣠ ]],
-  [[ ⡝⡵⡈⢟⢕⢕⢕⢕⣵⣿⣿⣿⣿⣿⣿⣿⣿⣿⣶⣶⣿⣿⣿⣿⣿⠿⠋⣀⣈⠙ ]],
-  [[ ⡝⡵⡕⡀⠑⠳⠿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠿⠛⢉⡠⡲⡫⡪⡪⡣ ]],
-  [[            Bigduu              ]],
-}
-
-db.custom_center = {
-  {
-    icon = "  ",
-    desc = "Recently files                      ",
-    action = "Telescope oldfiles",
+db.setup({
+  theme = "hyper",
+  config = {
+    week_header = {
+      enable = true,
+    },
+    shortcut = {
+      { desc = " Update", group = "@property", action = "Lazy update", key = "u" },
+      {
+        desc = " Files",
+        group = "Label",
+        action = "Telescope find_files",
+        key = "f",
+      },
+      {
+        desc = " Apps",
+        group = "DiagnosticHint",
+        action = "Telescope app",
+        key = "a",
+      },
+      {
+        desc = " dotfiles",
+        group = "Number",
+        action = "Telescope dotfiles",
+        key = "d",
+      },
+    },
   },
-  {
-    icon = "  ",
-    desc = "Projects                            ",
-    action = "Telescope projects",
-  },
-  {
-    icon = "  ",
-    desc = "Edit keybindings                    ",
-    action = "edit ~/.config/nvim/lua/keybindings.lua",
-  },
-  {
-    icon = "  ",
-    desc = "Edit Projects                       ",
-    action = "edit ~/.local/share/nvim/project_nvim/project_history",
-  },
-}
+})

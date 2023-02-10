@@ -69,7 +69,11 @@ packer.startup({
     use({ "nvim-telescope/telescope.nvim", requires = { "nvim-lua/plenary.nvim" } })
     use({ "LinArcX/telescope-command-palette.nvim" })
     -- dashboard and project
-    use("glepnir/dashboard-nvim")
+    use({
+      "glepnir/dashboard-nvim",
+      event = "VimEnter",
+      requires = { "nvim-tree/nvim-web-devicons" },
+    })
     use("ahmedkhalf/project.nvim")
 
     use("windwp/nvim-autopairs")
@@ -94,8 +98,7 @@ packer.startup({
     -- pupup window for code action
     use({ "weilbith/nvim-code-action-menu", cmd = "CodeActionMenu" })
     -- rust
-    use("kdarkhan/rust-tools.nvim")
-    -- use("simrat39/rust-tools.nvim")
+    use("simrat39/rust-tools.nvim")
     use("rust-lang/rust.vim")
     -- rust crates
     use({
@@ -132,13 +135,13 @@ packer.startup({
   },
 })
 -- auto install plugin
-pcall(
----@diagnostic disable-next-line: param-type-mismatch
-  vim.cmd,
-  [[
-augroup packer_user_config
-autocmd!
-autocmd BufWritePost plugins.lua source <afile> | PackerSync
-augroup end
-]]
-)
+-- pcall(
+-- ---@diagnostic disable-next-line: param-type-mismatch
+--   vim.cmd,
+--   [[
+-- augroup packer_user_config
+-- autocmd!
+-- autocmd BufWritePost plugins.lua source <afile> | PackerSync
+-- augroup end
+-- ]]
+-- )

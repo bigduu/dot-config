@@ -30,13 +30,13 @@ saga.setup({
       go_action = "i",
     },
   },
-  definition_action_keys = {
-    edit = "o",
-    vsplit = "<C-i>v",
-    split = "<C-i>i",
-    tabe = "<C-i>t",
-    quit = "<C-c>",
-  },
+  -- definition_action_keys = {
+  --   edit = "o",
+  --   vsplit = "<C-i>v",
+  --   split = "<C-i>i",
+  --   tabe = "<C-i>t",
+  --   quit = "<C-c>",
+  -- },
 })
 -- Float terminal
 keymap("n", "<A-d>", "<cmd>Lspsaga open_floaterm<CR>", { silent = true })
