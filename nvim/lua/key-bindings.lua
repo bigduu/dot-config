@@ -3,8 +3,8 @@ vim.g.maplocalleader = ","
 
 local map = vim.api.nvim_set_keymap
 local opt = {
-  noremap = true,
-  silent = true,
+    noremap = true,
+    silent = true,
 }
 
 map("i", "jk", "<ESC>", opt)
@@ -66,7 +66,7 @@ pluginKeys.mapLSP = function(mapbuf)
   mapbuf("n", "gn", ":Lspsaga diagnostic_jump_next<CR>", opt)
   mapbuf("n", "gl", ":Lspsaga show_cursor_diagnostics<CR>", opt)
   mapbuf("n", "gp", ":Lspsaga diagnostic_jump_prev<CR>", opt)
-  mapbuf("n", "<leader>ff", ":lua vim.lsp.buf.format()<CR>:w<CR>", opt)
+  mapbuf("n", "<leader>ff", ":lua vim.lsp.buf.format { async = true }<CR>:w<CR>", opt)
   -- code action
   mapbuf("i", "<ctrl><space>", "<cmd>lua vim.lsp.buf.code_action()<CR>", opt)
   mapbuf("n", "<leader>l", ":Lspsaga code_action<CR>", opt)
@@ -79,16 +79,16 @@ end
 
 -- comment
 pluginKeys.comment = {
-  -- Normal 模式快捷键
-  toggler = {
-    line = "gcc", -- 行注释
-    block = "gbc", -- 块注释
-  },
-  -- Visual 模式
-  opleader = {
-    line = "gc",
-    bock = "gb",
-  },
+    -- Normal 模式快捷键
+    toggler = {
+        line = "gcc", -- 行注释
+        block = "gbc", -- 块注释
+    },
+    -- Visual 模式
+    opleader = {
+        line = "gc",
+        bock = "gb",
+    },
 }
 
 -- typescript
@@ -151,15 +151,15 @@ pluginKeys.mapDAP = function()
   map("n", "<leader>dd", ":RustDebuggables<CR>", opt)
   -- 结束
   map(
-    "n",
-    "<leader>de",
-    ":lua require'dap'.close()<CR>"
-    .. ":lua require'dap'.terminate()<CR>"
-    .. ":lua require'dap.repl'.close()<CR>"
-    .. ":lua require'dapui'.close()<CR>"
-    .. ":lua require('dap').clear_breakpoints()<CR>"
-    .. "<C-w>o<CR>",
-    opt
+      "n",
+      "<leader>de",
+      ":lua require'dap'.close()<CR>"
+      .. ":lua require'dap'.terminate()<CR>"
+      .. ":lua require'dap.repl'.close()<CR>"
+      .. ":lua require'dapui'.close()<CR>"
+      .. ":lua require('dap').clear_breakpoints()<CR>"
+      .. "<C-w>o<CR>",
+      opt
   )
   -- 继续
   map("n", "<leader>dc", ":lua require'dap'.continue()<CR>", opt)

@@ -21,7 +21,7 @@ require("lsp.outline")
 require("mason-lspconfig").setup({
     -- 确保安装，根据需要填写
     ensure_installed = {
-        "sumneko_lua",
+        "lua_ls",
         "tsserver",
         "tailwindcss",
         "bashls",
@@ -35,7 +35,7 @@ require("mason-lspconfig").setup({
         "taplo",
         "yamlls",
         "gopls",
-        "vuels",
+        "volar",
         "jdtls",
         "kotlin_language_server",
         "clangd",
@@ -46,7 +46,7 @@ require("mason-lspconfig").setup({
 local lspconfig = require("lspconfig")
 
 local servers = {
-    sumneko_lua = require("lsp.config.lua"), -- lua/lsp/config/lua.lua
+    lua_ls = require("lsp.config.lua"), -- lua/lsp/config/lua.lua
     bashls = require("lsp.config.bash"),
     pyright = require("lsp.config.pyright"),
     html = require("lsp.config.html"),
@@ -58,7 +58,7 @@ local servers = {
     yamlls = require("lsp.config.yamlls"),
     kotlin_language_server = require("lsp.config.kotlin"),
     taplo = require("lsp.config.taplo"),
-    vuels = require("lsp.config.vue"),
+    volar = require("lsp.config.vue"),
     jdtls = require("lsp.config.java"),
     gopls = require("lsp.config.go"),
     clangd = require("lsp.config.clangd"),

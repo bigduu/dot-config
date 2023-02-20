@@ -1,5 +1,7 @@
 {
   "dependencies": {
-    "create-next-app": "^13.0.7"
+    "create-next-app": "^13.0.7",
+    "create-react-app": "^5.0.1",
+    "create-vite": "^4.1.0"
   }
 }
