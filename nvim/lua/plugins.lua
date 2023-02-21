@@ -24,8 +24,8 @@ packer.startup({
       use("p00f/nvim-ts-rainbow")
       use("onsails/lspkind-nvim")
       use({
-          "glepnir/lspsaga.nvim",
-          branch = "main",
+          "bigduu/lspsaga.nvim",
+          branch = "fix-code-action-not-execute-selected-line",
       })
       -- outline
       use("simrat39/symbols-outline.nvim")

@@ -3,7 +3,7 @@ local saga = require("lspsaga")
 saga.setup({
   border_style = "rounded",
   code_action_keys = {
-    quit = "<C-c>",
+    quit = "q",
     exec = "<CR>",
   },
   -- show outline

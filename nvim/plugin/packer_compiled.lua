@@ -219,7 +219,7 @@ _G.packer_plugins = {
   ["lspsaga.nvim"] = {
     loaded = true,
     path = "/Users/bigduu/.local/share/nvim/site/pack/packer/start/lspsaga.nvim",
-    url = "https://github.com/glepnir/lspsaga.nvim"
+    url = "https://github.com/bigduu/lspsaga.nvim"
   },
   ["lualine-lsp-progress"] = {
     loaded = true,
@@ -363,6 +363,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/bigduu/.local/share/nvim/site/pack/packer/start/project.nvim",
     url = "https://github.com/ahmedkhalf/project.nvim"
+  },
+  ["rust-tools.nvim"] = {
+    loaded = true,
+    path = "/Users/bigduu/.local/share/nvim/site/pack/packer/start/rust-tools.nvim",
+    url = "https://github.com/simrat39/rust-tools.nvim"
   },
   ["rust.vim"] = {
     loaded = true,
