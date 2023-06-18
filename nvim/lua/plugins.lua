@@ -7,6 +7,7 @@ packer.startup({
       use("APZelos/blamer.nvim")
       use({ "sindrets/diffview.nvim", requires = "nvim-lua/plenary.nvim" })
       use("yamatsum/nvim-cursorline")
+      use("kdheepak/lazygit.nvim")
       -- lualine
       use({ "nvim-lualine/lualine.nvim", requires = { "kyazdani42/nvim-web-devicons" } })
       use("arkav/lualine-lsp-progress")
@@ -24,8 +25,8 @@ packer.startup({
       use("p00f/nvim-ts-rainbow")
       use("onsails/lspkind-nvim")
       use({
-          "bigduu/lspsaga.nvim",
-          branch = "fix-code-action-not-execute-selected-line",
+          "glepnir/lspsaga.nvim",
+          branch = "main",
       })
       -- outline
       use("simrat39/symbols-outline.nvim")
@@ -71,7 +72,6 @@ packer.startup({
       use("ahmedkhalf/project.nvim")
 
       use("windwp/nvim-autopairs")
-      use({ "VonHeikemen/fine-cmdline.nvim", requires = { { "MunifTanjim/nui.nvim" } } })
       -- debugging
       use("mfussenegger/nvim-dap")
       use("theHamsta/nvim-dap-virtual-text")
@@ -103,8 +103,26 @@ packer.startup({
           end,
       })
       -- tabnine code completed
-      use({ "tzachar/cmp-tabnine", run = "./install.sh", requires = "hrsh7th/nvim-cmp" })
-      use("github/copilot.vim")
+      -- use({ "tzachar/cmp-tabnine", run = "./install.sh", requires = "hrsh7th/nvim-cmp" })
+      -- use("github/copilot.vim")
+      use {
+          "zbirenbaum/copilot-cmp",
+          after = { "copilot.lua" },
+          config = function()
+            require("copilot_cmp").setup()
+          end
+      }
+      use {
+          "zbirenbaum/copilot.lua",
+          cmd = "Copilot",
+          event = "InsertEnter",
+          config = function()
+            require("copilot").setup({
+                suggestion = { enable = false },
+                panel = { enable = false },
+            })
+          end,
+      }
       use({
           "iamcco/markdown-preview.nvim",
           run = function()
@@ -117,13 +135,6 @@ packer.startup({
       use("lukas-reineke/indent-blankline.nvim")
       -- git
       use({ "lewis6991/gitsigns.nvim" })
-      -- command line
-      use({
-          "VonHeikemen/fine-cmdline.nvim",
-          requires = {
-              { "MunifTanjim/nui.nvim" },
-          },
-      })
     end,
     config = {
         max_jobs = 15,

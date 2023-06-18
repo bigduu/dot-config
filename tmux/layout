@@ -1,0 +1,188 @@
+
+
+
+
+~
+➜
+
+~
+➜
+
+~
+➜
+
+~
+➜
+
+~
+➜
+
+~
+➜
+
+~
+➜
+
+~
+➜
+
+~
+➜
+
+~
+➜
+
+~
+➜
+
+~
+➜
+
+~
+➜
+
+~
+➜
+
+~
+➜
+
+~
+➜
+
+~
+➜
+
+~
+➜
+
+~
+➜
+
+~
+➜
+
+~
+➜
+
+~
+➜
+
+~
+➜
+
+~
+➜
+
+~
+❯
+
+~
+❯ j open
+/Users/bigduu/Workspace/RustProjects/openai
+
+openai on  master [✘!+?] is 📦 v0.1.0 via 🦀 v1.68.0
+➜ ls
+Cargo.lock      LICENSE.md      application.yml img             target
+Cargo.toml      README.md       build.sh        src
+
+openai on  master [✘!+?] is 📦 v0.1.0 via 🦀 v1.68.0
+➜
+
+openai on  master [✘!+?] is 📦 v0.1.0 via 🦀 v1.68.0
+➜
+
+openai on  master [✘!+?] is 📦 v0.1.0 via 🦀 v1.68.0
+➜
+
+openai on  master [✘!+?] is 📦 v0.1.0 via 🦀 v1.68.0
+➜
+
+openai on  master [✘!+?] is 📦 v0.1.0 via 🦀 v1.68.0
+➜
+
+openai on  master [✘!+?] is 📦 v0.1.0 via 🦀 v1.68.0
+➜
+
+openai on  master [✘!+?] is 📦 v0.1.0 via 🦀 v1.68.0
+➜
+
+openai on  master [✘!+?] is 📦 v0.1.0 via 🦀 v1.68.0
+➜
+
+openai on  master [✘!+?] is 📦 v0.1.0 via 🦀 v1.68.0
+➜
+
+openai on  master [✘!+?] is 📦 v0.1.0 via 🦀 v1.68.0
+➜
+
+openai on  master [✘!+?] is 📦 v0.1.0 via 🦀 v1.68.0
+➜
+
+openai on  master [✘!+?] is 📦 v0.1.0 via 🦀 v1.68.0
+➜
+
+openai on  master [✘!+?] is 📦 v0.1.0 via 🦀 v1.68.0
+➜
+
+openai on  master [✘!+?] is 📦 v0.1.0 via 🦀 v1.68.0
+➜
+
+openai on  master [✘!+?] is 📦 v0.1.0 via 🦀 v1.68.0
+➜
+
+openai on  master [✘!+?] is 📦 v0.1.0 via 🦀 v1.68.0
+➜
+
+openai on  master [✘!+?] is 📦 v0.1.0 via 🦀 v1.68.0
+➜
+
+openai on  master [✘!+?] is 📦 v0.1.0 via 🦀 v1.68.0
+➜
+
+openai on  master [✘!+?] is 📦 v0.1.0 via 🦀 v1.68.0
+➜
+
+openai on  master [✘!+?] is 📦 v0.1.0 via 🦀 v1.68.0
+➜
+
+openai on  master [✘!+?] is 📦 v0.1.0 via 🦀 v1.68.0
+➜
+
+openai on  master [✘!+?] is 📦 v0.1.0 via 🦀 v1.68.0
+➜
+
+openai on  master [✘!+?] is 📦 v0.1.0 via 🦀 v1.68.0
+➜ ls
+Cargo.lock      LICENSE.md      application.yml img             target
+Cargo.toml      README.md       build.sh        src
+
+openai on  master [✘!+?] is 📦 v0.1.0 via 🦀 v1.68.0
+➜ tmux -2 savess -a ~/.config/tmux/layout
+unknown command: savess
+
+openai on  master [✘!+?] is 📦 v0.1.0 via 🦀 v1.68.0
+❯ tmux capture-pane -S - ; tmux save-buffer ~/.config/tmux/layout
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

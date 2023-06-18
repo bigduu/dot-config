@@ -66,7 +66,8 @@ vim.o.splitright = true
 vim.o.wildmenu = true
 --Dont'passmessagesto|ins-completinmenu|
 vim.o.shortmess = vim.o.shortmess .. "c"
-vim.o.pumheight = 10
+-- 弹出框数量
+vim.o.pumheight = 0
 --alwaysshowtabline
 vim.o.showtabline = 2
 --clipboard
