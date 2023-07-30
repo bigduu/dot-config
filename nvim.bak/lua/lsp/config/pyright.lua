@@ -4,6 +4,9 @@ return {
 			flags = {
 				debounce_text_changes = 150,
 			},
+      -- python = {
+      --   venvPath = "/Users/bigduu/.conda/",
+      -- },
 			on_attach = function(client, bufnr)
 				-- 禁用格式化功能，交给专门插件插件处理
 				client.server_capabilities.document_formatting = false
