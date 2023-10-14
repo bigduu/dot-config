@@ -52,8 +52,8 @@ shift + cmd - 9 : yabai -m window --space  9; yabai -m space --focus 9
 shift + cmd - 0 : yabai -m window --space 10; yabai -m space --focus 10
 
 # focus monitor
-ctrl + alt - k  : yabai -m display --focus prev
-ctrl + alt - j  : yabai -m display --focus next
+ctrl + alt - h  : yabai -m display --focus next
+ctrl + alt - l  : yabai -m display --focus prev
 #ctrl + alt - 1  : yabai -m display --focus 1
 #ctrl + alt - 2  : yabai -m display --focus 2
 #ctrl + alt - 3  : yabai -m display --focus 3
