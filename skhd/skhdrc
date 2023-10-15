@@ -22,7 +22,7 @@ shift + alt - r : yabai -m space --balance
 #cmd + alt - w : yabai -m space --destroy
 
 # fast focus desktop
-cmd - h : yabai -m space --focus prev
+cmd - h : yabai -m space --focus prev 
 cmd - l : yabai -m space --focus next
 alt - 1 : yabai -m space --focus 1
 alt - 2 : yabai -m space --focus 2

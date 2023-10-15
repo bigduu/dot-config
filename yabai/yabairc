@@ -18,6 +18,7 @@ yabai -m config active_window_opacity 1.0
 yabai -m config normal_window_opacity 0.8
 yabai -m config window_shadow off
 yabai -m config window_border off
+yabai -m config window__border_blur off
 yabai -m config window_border_width 1
 yabai -m config active_window_border_color 0xffffffff
 yabai -m config normal_window_border_color 0xff505050
@@ -30,14 +31,11 @@ yabai -m config bottom_padding 10
 yabai -m config left_padding 10
 yabai -m config right_padding 10
 yabai -m config window_gap 10
-# New window spawns to the left if vertical split, or top if horizontal split
-yabai -m config window_placement first_child
 
 # ignore app
 yabai -m rule --add app="^系统设置$" manage=off
 yabai -m rule --add app="^提醒事项$" manage=off
 yabai -m rule --add app="^关于本机$" manage=off
-yabai -m rule --add app="^访达$" manage=off
 yabai -m rule --add app="^1password$" manage=off
 yabai -m rule --add app="*setapp" manage=off
 yabai -m rule --add app="*Setapp" manage=off
