@@ -1,0 +1,60 @@
+{
+    "access_password_mode": 0,
+    "allow_control": false,
+    "boot_auto_backrun": false,
+    "boot_auto_rest": true,
+    "boot_auto_run": false,
+    "controlled_code_mode": {
+        "decoding": 0,
+        "video_encoding": 0
+    },
+    "custom_hot_key": {
+        "Key_changeScreen": "Alt+Q",
+        "Key_fullScreen": "Alt+Shift+Z",
+        "Key_lockedMouse": "Alt+Locked",
+        "Key_syncVoice": "Alt+Voice",
+        "Key_video": "Alt+S"
+    },
+    "email_login_info": {
+        "account": "",
+        "email": "",
+        "emailpwd": ""
+    },
+    "hide_background": false,
+    "hide_levitated_sphere": false,
+    "hot_key_map": {
+        "Key_Command": "Ctrl",
+        "Key_Control": "Win",
+        "Key_Option": "Alt"
+    },
+    "key_update_mode": 0,
+    "last_login_info": {
+        "id": 184516,
+        "name": "T1m7cERAJQ"
+    },
+    "last_login_token": "rsat:mqhyVKhRjUYj77l2Y62aMBqpLbi",
+    "lock_screen_on_close": false,
+    "login_remember_me": false,
+    "main_window_lock_info": {
+        "check_or_nor": false,
+        "date": "",
+        "device_id": "",
+        "lock_or_nor": false,
+        "password": "",
+        "password_error_times": 0,
+        "verification_code_error_times": 0
+    },
+    "need_verify_admin": false,
+    "net_proxy": {
+        "proxy_address": "",
+        "proxy_name": "",
+        "proxy_password": "",
+        "proxy_port": "",
+        "proxy_type": 0
+    },
+    "no_verify_same_account": false,
+    "play_control_voice": true,
+    "restore_lastdata": false,
+    "use_hotkey": false,
+    "verify_different_account": false
+}

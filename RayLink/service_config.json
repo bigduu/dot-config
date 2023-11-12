@@ -1,0 +1,23 @@
+{
+   "account" : "KribsAbxb+CFAJRfvI1j94/2rO+WH4sUp7B0GSFqlZs=",
+   "allow_control" : false,
+   "device_fixed_key" : "tIbWJjeIlU/9G/2Wkknt4RweQBKGaA9mPdoq4FcWfA0=",
+   "device_id" : "NAGPxLMCAMieE+/F7cQF4mXx1dlBCe/nXkOcGOXtU0s=",
+   "device_key" : "kcpSsh6nDD5ubxvapZ1DMCJpTJ0OQtIHuF1Hviy/84w=",
+   "force_update" : false,
+   "key_access_mode" : 0,
+   "key_update_mode" : 0,
+   "last_update_key" : 0,
+   "lock_screen_on_close" : false,
+   "mac" : "F8:4D:89:69:89:08",
+   "need_verify_admin" : false,
+   "password" : "zyor7+W5QMkQpNysIP9PHQzrXCm68vgQU8j+PZZ6V/SGQw6uL3M5fjRUHcWjup05nr1pkXcl6It2HkvQrAas6Q==",
+   "port" : 443,
+   "proxy_account" : "",
+   "proxy_host" : "",
+   "proxy_password" : "",
+   "proxy_port" : 0,
+   "proxy_type" : 0,
+   "server" : "api.raylink.live",
+   "verify_diffirent_account" : false
+}

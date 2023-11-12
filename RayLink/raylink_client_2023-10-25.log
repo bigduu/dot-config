@@ -1,0 +1,86 @@
+[2023-10-25 01:35:38.948] [info] [13863014] [main.cpp:277] [app_isRunning] RayLink contains counts = 1,des = /Applications/RayLink.app/Contents/MacOS/RayLink
+[2023-10-25 01:35:39.065] [info] [13863014] [main.cpp:473] [main_window] Check RayLinkService process 0
+[2023-10-25 01:35:39.905] [info] [13863014] [MainWindow.cpp:2939] [init_ui] AccessibilityPermission : false ScreenRecordingPermission : false
+[2023-10-25 01:35:39.994] [info] [13863014] [MainWindow.cpp:6328] [on_mac_auto_start] appPath is /Applications/RayLink.app/Contents/MacOS/RayLink
+[2023-10-25 01:35:40.091] [info] [13863014] [HttpController.cpp:75] [set_proxy_port] server proxy port 0, sso proxy port 0
+[2023-10-25 01:35:40.113] [info] [13863014] [ProtocolCommunicat.cpp:876] [connect_local_service] connecting local service
+[2023-10-25 01:35:40.113] [warning] [13863014] [ProtocolCommunicat.cpp:906] [connect_local_service] read config.json service_port failure
+[2023-10-25 01:35:41.115] [warning] [13863014] [ProtocolCommunicat.cpp:906] [connect_local_service] read config.json service_port failure
+[2023-10-25 01:35:42.116] [warning] [13863014] [ProtocolCommunicat.cpp:906] [connect_local_service] read config.json service_port failure
+[2023-10-25 01:35:43.118] [warning] [13863014] [ProtocolCommunicat.cpp:906] [connect_local_service] read config.json service_port failure
+[2023-10-25 01:35:44.119] [warning] [13863014] [ProtocolCommunicat.cpp:906] [connect_local_service] read config.json service_port failure
+[2023-10-25 01:35:45.120] [warning] [13863014] [ProtocolCommunicat.cpp:906] [connect_local_service] read config.json service_port failure
+[2023-10-25 01:35:46.121] [warning] [13863014] [ProtocolCommunicat.cpp:906] [connect_local_service] read config.json service_port failure
+[2023-10-25 01:35:47.123] [info] [13863014] [main.cpp:204] [setupDockClickEvent] setupDockClickEvent clicked
+[2023-10-25 01:35:47.123] [info] [13863014] [main.cpp:214] [setupDockClickEvent] Registered dock click handler (replaced original method)
+[2023-10-25 01:35:47.123] [info] [13863014] [main.cpp:233] [setupDockExitEvent] setupDockExitEvent clicked
+[2023-10-25 01:35:47.123] [info] [13864046] [ProtocolCommunicat.cpp:929] [operator()] connect local service success
+[2023-10-25 01:35:47.123] [info] [13863014] [main.cpp:243] [setupDockExitEvent] Registered dock exit handler (replaced original method)
+[2023-10-25 01:35:47.129] [info] [13864046] [MainWindow.cpp:1490] [on_update_ui_config] update config {"deviceId":"321332318","deviceKey":"5bYwV433","deviceFixedKey":"Ak8IgH69","mirrorOrExtendMode":0}
+[2023-10-25 01:35:47.130] [info] [13864046] [MainWindow.cpp:272] [on_online] service state, {"connectionState":"connected"}
+[2023-10-25 01:35:47.130] [info] [13864046] [MainWindow.cpp:2197] [on_license_changed] on license changed, {}
+[2023-10-25 01:35:47.143] [info] [13863014] [MainWindow.cpp:6948] [send_subcrible_device_msg] recent list is empty,dont subscribe_recent_connection
+[2023-10-25 01:35:47.154] [info] [13864046] [MainWindow.cpp:2359] [on_query_recent_device_status_response] on_query_recent_device_status_response {"messageId":2,"error":"failed"}
+[2023-10-25 01:35:47.158] [info] [13864046] [MainWindow.cpp:2359] [on_query_recent_device_status_response] on_query_recent_device_status_response {"messageId":3,"error":"failed"}
+[2023-10-25 01:35:47.209] [info] [13863014] [MainWindow.cpp:2363] [operator()] query_recent_device_status  failed 1
+[2023-10-25 01:35:47.209] [info] [13863014] [MainWindow.cpp:2363] [operator()] query_recent_device_status  failed 1
+[2023-10-25 01:35:47.210] [info] [13863014] [main.cpp:168] [applicationShouldHandleReopen] applicationShouldHandleReopen event
+[2023-10-25 01:35:47.231] [info] [13863014] [main.cpp:168] [applicationShouldHandleReopen] applicationShouldHandleReopen event
+[2023-10-25 01:35:47.233] [info] [13863014] [main.cpp:168] [applicationShouldHandleReopen] applicationShouldHandleReopen event
+[2023-10-25 01:36:44.535] [info] [13864046] [MainWindow.cpp:272] [on_online] service state, {"connectionState":"disconnected"}
+[2023-10-25 01:36:52.189] [info] [13864046] [MainWindow.cpp:1490] [on_update_ui_config] update config {"deviceId":"321332318","deviceKey":"5bYwV433","deviceFixedKey":"Ak8IgH69","mirrorOrExtendMode":0}
+[2023-10-25 01:36:52.189] [info] [13864046] [MainWindow.cpp:272] [on_online] service state, {"connectionState":"connected"}
+[2023-10-25 01:36:52.189] [info] [13864046] [MainWindow.cpp:2197] [on_license_changed] on license changed, {}
+[2023-10-25 01:36:52.190] [info] [13863014] [MainWindow.cpp:6948] [send_subcrible_device_msg] recent list is empty,dont subscribe_recent_connection
+[2023-10-25 01:36:52.211] [info] [13864046] [MainWindow.cpp:2359] [on_query_recent_device_status_response] on_query_recent_device_status_response {"messageId":4,"error":"failed"}
+[2023-10-25 01:36:52.211] [info] [13863014] [MainWindow.cpp:2363] [operator()] query_recent_device_status  failed 1
+[2023-10-25 01:39:28.323] [info] [13863014] [LoginDialog.cpp:98] [on_getIdCode_response] IdCode login request
+[2023-10-25 01:39:43.690] [info] [13887523] [HttpController.cpp:469] [operator()] idCode login response: {"result":true,"code":200,"data":{"isValidated":false,"rsAuthToken":"rsat:mqhyVKhRjUYj77l2Y62aMBqpLbi","userInfoResp":{"controlledDeviceNum":0,"phone":"17381188852","registerTime":"2023-10-25T01:39:43","masterConcurrentNum":0,"nickName":"T1m7cERAJQ","thirdPartyResps":[],"avatar":"","id":184516,"invCode":"YAR8VA7L","rsAuthToken":"rsat:mqhyVKhRjUYj77l2Y62aMBqpLbi"}},"serverTime":1698169183706,"label":"成功","message":"成功","version":"1.0.0"},is Validated false
+[2023-10-25 01:39:43.910] [info] [13864046] [MainWindow.cpp:2197] [on_license_changed] on license changed, {"maxProfessionalCount":1}
+[2023-10-25 01:39:43.922] [info] [13864046] [MainWindow.cpp:374] [on_login] login response, {"server":"api.raylink.live","port":443,"account":"T1m7cERAJQ","password":"rsat:mqhyVKhRjUYj77l2Y62aMBqpLbi"}
+[2023-10-25 01:39:43.931] [info] [13863014] [MainWindow.cpp:438] [operator()] on_login get list:login status: true,bonline status:true
+[2023-10-25 01:39:43.931] [info] [13863014] [MainWindow.cpp:7134] [first_get_device_list] login status:true,online status:true,bAlreadly_get_list:false
+[2023-10-25 01:39:43.932] [info] [13863014] [MainWindow.cpp:7144] [first_get_device_list] get_all_list message_id:7, group_id:0
+[2023-10-25 01:39:43.948] [info] [13864046] [MainWindow.cpp:1581] [on_get_device_group_response] get device group, {"messageId":6,"item":[{"groupId":1,"groupName":"最近连接"},{"groupId":2,"groupName":"常用设备"},{"groupId":3,"groupName":"我的设备"}]}
+[2023-10-25 01:39:43.951] [info] [13864046] [MainWindow.cpp:1616] [on_get_device_list_response] get device list, {"messageId":7}
+[2023-10-25 01:39:43.953] [info] [13863014] [controlledlist.cpp:2253] [clearList] clear all list data
+[2023-10-25 01:39:43.953] [info] [13863014] [MainWindow.cpp:6539] [unsign_add_recentcon] m_connecting_list size() = 0
+[2023-10-25 01:39:43.954] [info] [13863014] [MainWindow.cpp:6948] [send_subcrible_device_msg] recent list is empty,dont subscribe_recent_connection
+[2023-10-25 01:39:43.970] [info] [13864046] [MainWindow.cpp:2359] [on_query_recent_device_status_response] on_query_recent_device_status_response {"messageId":8,"error":"failed"}
+[2023-10-25 01:39:43.973] [info] [13863014] [MainWindow.cpp:2363] [operator()] query_recent_device_status  failed 1
+[2023-10-25 01:39:44.002] [info] [13887702] [HttpController.cpp:131] [operator()] Get user info response: {"result":true,"code":200,"data":{"phone":"17381188852","registerTime":"2023-10-25T01:39:44","userAccountConfigVo":{"concurrencyCount":1,"accountRegion":"中国 广东 广州","connectionChannelCount":1,"accountLevel":1},"thirdPartyResps":[],"id":184516,"userName":"T1m7cERAJQ","rsAuthToken":"rsat:mqhyVKhRjUYj77l2Y62aMBqpLbi","loggedPlatform":"rsat:mqhyVKhRjUYj77l2Y62aMBqpLbi"},"serverTime":1698169184023,"label":"成功","message":"成功","version":"1.0.0"}
+[2023-10-25 01:39:44.007] [info] [13863014] [MainWindow.cpp:6948] [send_subcrible_device_msg] recent list is empty,dont subscribe_recent_connection
+[2023-10-25 01:39:44.077] [info] [13887712] [HttpController.cpp:246] [operator()] body{"version":"1.0.0","result":true,"message":"成功","label":"成功","code":200,"data":{"fileTransferDirection":1,"screenshotProtection":0,"watermarkContentList":[1,4],"watermarkEnable":0,"id":113857,"watermarkTitle":"严禁泄密","userId":184516,"clipboardDirection":1,"watermarkOpacity":20},"serverTime":1698169184098}
+[2023-10-25 01:39:44.077] [info] [13887712] [HttpController.cpp:261] [operator()] get user Security setting response: {"version":"1.0.0","result":true,"message":"成功","label":"成功","code":200,"data":{"fileTransferDirection":1,"screenshotProtection":0,"watermarkContentList":[1,4],"watermarkEnable":0,"id":113857,"watermarkTitle":"严禁泄密","userId":184516,"clipboardDirection":1,"watermarkOpacity":20},"serverTime":1698169184098}
+[2023-10-25 01:39:44.077] [info] [13863014] [MainWindow.cpp:4700] [operator()] user security setting clipboard:1,filetrans:1
+[2023-10-25 01:39:44.225] [info] [13864046] [MainWindow.cpp:1490] [on_update_ui_config] update config {"deviceId":"321332318","deviceKey":"5bYwV433","deviceFixedKey":"Ak8IgH69","mirrorOrExtendMode":0}
+[2023-10-25 01:39:44.226] [info] [13864046] [MainWindow.cpp:272] [on_online] service state, {"connectionState":"connected"}
+[2023-10-25 01:39:44.226] [info] [13864046] [MainWindow.cpp:2197] [on_license_changed] on license changed, {"maxProfessionalCount":1}
+[2023-10-25 01:39:44.228] [error] [13863014] [Config.cpp:777] [read_config] json exception
+[2023-10-25 01:39:44.228] [info] [13863014] [MainWindow.cpp:6948] [send_subcrible_device_msg] recent list is empty,dont subscribe_recent_connection
+[2023-10-25 01:39:44.228] [info] [13863014] [MainWindow.cpp:339] [operator()] on_online get list:login status: true,bonline status:true
+[2023-10-25 01:39:44.228] [info] [13863014] [MainWindow.cpp:7134] [first_get_device_list] login status:true,online status:true,bAlreadly_get_list:true
+[2023-10-25 01:39:44.459] [info] [13863014] [MainWindow.cpp:1699] [operator()] unsign to login have remote connection is true,get first list true
+[2023-10-25 01:39:44.803] [info] [13863014] [MainWindow.cpp:5602] [connect_peer_device] current connect state false
+[2023-10-25 01:39:44.803] [info] [13863014] [MainWindow.cpp:5702] [connect_peer_device] connect peer, msg = {"id":"242085551","machineName":"dumugengdeMacBook-Pro.local","account":"T1m7cERAJQ","useProfessional":true,"controllId":"321332318"}
+[2023-10-25 01:39:44.957] [info] [13864046] [MainWindow.cpp:2287] [on_push_message] on push message, {"controlledDeviceListUpdate":true,"groupIdList":[3]}
+[2023-10-25 01:39:44.959] [info] [13864046] [MainWindow.cpp:2287] [on_push_message] on push message, {"controlledDeviceListUpdate":true,"groupIdList":[3]}
+[2023-10-25 01:39:44.980] [info] [13864046] [MainWindow.cpp:1616] [on_get_device_list_response] get device list, {"messageId":10,"deviceList":[{"nodeId":6345755,"groupId":3,"deviceName":"dumugengdeMacBook-Pro","deviceId":"321332318","platform":"mac","ipAddr":"广东省广州市 113.111.10.12","deviceStatus":"online","updateTimestamp":1698169184,"macAddress":"F8:4D:89:69:89:08","version":"6.2.5.8"}]}
+[2023-10-25 01:39:44.985] [info] [13863014] [MainWindow.cpp:6948] [send_subcrible_device_msg] recent list is empty,dont subscribe_recent_connection
+[2023-10-25 01:39:44.988] [info] [13864046] [MainWindow.cpp:1616] [on_get_device_list_response] get device list, {"messageId":11,"deviceList":[{"nodeId":6345755,"groupId":3,"deviceName":"dumugengdeMacBook-Pro","deviceId":"321332318","platform":"mac","ipAddr":"广东省广州市 113.111.10.12","deviceStatus":"online","updateTimestamp":1698169184,"macAddress":"F8:4D:89:69:89:08","version":"6.2.5.8"}]}
+[2023-10-25 01:39:44.992] [info] [13863014] [MainWindow.cpp:6948] [send_subcrible_device_msg] recent list is empty,dont subscribe_recent_connection
+[2023-10-25 01:39:47.889] [info] [13863014] [MainWindow.cpp:5602] [connect_peer_device] current connect state true
+[2023-10-25 01:39:54.858] [info] [13864046] [MainWindow.cpp:575] [on_connect_peer_device] connect peer response, {"messageId":9,"error":"failed"}
+[2023-10-25 01:39:54.860] [info] [13863014] [MainWindow.cpp:674] [operator()] report the number of connect failure: sdn connect fail, type: 1
+[2023-10-25 01:39:54.994] [info] [13888646] [HttpController.cpp:919] [operator()]  number of connect peer failures is reported sunccessfully
+[2023-10-25 01:39:56.669] [info] [13863014] [MainWindow.cpp:5602] [connect_peer_device] current connect state false
+[2023-10-25 01:39:56.669] [info] [13863014] [MainWindow.cpp:5702] [connect_peer_device] connect peer, msg = {"id":"242085551","machineName":"dumugengdeMacBook-Pro.local","account":"T1m7cERAJQ","useProfessional":true,"controllId":"321332318"}
+[2023-10-25 01:40:06.721] [info] [13864046] [MainWindow.cpp:575] [on_connect_peer_device] connect peer response, {"messageId":12,"error":"failed"}
+[2023-10-25 01:40:06.726] [info] [13863014] [MainWindow.cpp:674] [operator()] report the number of connect failure: sdn connect fail, type: 1
+[2023-10-25 01:40:06.877] [info] [13889818] [HttpController.cpp:919] [operator()]  number of connect peer failures is reported sunccessfully
+[2023-10-25 01:40:29.595] [info] [13863014] [MainWindow.cpp:5602] [connect_peer_device] current connect state false
+[2023-10-25 01:40:29.595] [info] [13863014] [MainWindow.cpp:5702] [connect_peer_device] connect peer, msg = {"id":"242085551","machineName":"dumugengdeMacBook-Pro.local","account":"T1m7cERAJQ","useProfessional":true,"controllId":"321332318"}
+[2023-10-25 01:40:33.684] [info] [13863014] [MainWindow.cpp:7119] [auto_run] autorun = false
+[2023-10-25 01:40:39.645] [info] [13864046] [MainWindow.cpp:575] [on_connect_peer_device] connect peer response, {"messageId":13,"error":"failed"}
+[2023-10-25 01:40:39.647] [info] [13863014] [MainWindow.cpp:674] [operator()] report the number of connect failure: sdn connect fail, type: 1
+[2023-10-25 01:40:39.777] [info] [13892482] [HttpController.cpp:919] [operator()]  number of connect peer failures is reported sunccessfully

@@ -1,0 +1,3 @@
+2023/10/25 01:35:46.656293 [E][init_license]g_secretkey:56010047d96b93.48992100[/Users/raysync/work/jenkins/workspace1/Typhoonv6/base/libAuthentication/YyAuthenticationManage.c, 283]
+2023/10/25 01:35:46.656422 [E][init_license]g_srv_url:https://fly.cloudtalkers.com/[/Users/raysync/work/jenkins/workspace1/Typhoonv6/base/libAuthentication/YyAuthenticationManage.c, 306]
+2023/10/25 01:35:46.656513 [E][init_license]macAddr : 4b855af0098330dd94ecd27b96fbde1c[/Users/raysync/work/jenkins/workspace1/Typhoonv6/base/libAuthentication/YyAuthenticationManage.c, 375]
