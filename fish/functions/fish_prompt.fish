@@ -13,10 +13,6 @@ function vi
     nvim $argv
 end 
 
-function j
-    autojump $argv
-end
-
 function l
     ll 
 end
