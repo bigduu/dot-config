@@ -5,3 +5,5 @@ if status is-interactive
       source $AUTOJUMP_PATH
     end
 end
+
+neofetch

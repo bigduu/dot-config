@@ -418,10 +418,12 @@ set -g @plugin 'tmux-plugins/tmux-cpu'
 #set -g @plugin 'tmux-plugins/tmux-resurrect'
 #set -g @plugin 'tmux-plugins/tmux-continuum'
 #set -g @continuum-restore 'on'
-set -g @plugin 'dracula/tmux'
-set -g @dracula-plugins "weather ram-usage cpu-usage battery git"
+set -g @plugin 'bigduu/tmux'
+set -g @dracula-plugins "weather network-ping network-bandwidth ram-usage cpu-usage battery git"
 
-set -g @dracula-cpu-usage-label ""
+set -g @dracula-show-left-icon smiley
+set -g @dracula-show-left-sep 
+set -g @dracula-cpu-usage-label "CPU"
 set -g @dracula-show-flags true
 set -g @dracula-border-contrast true
 set -g @dracula-military-time true
@@ -430,8 +432,15 @@ set -g @dracula-show-powerline false
 set -g @dracula-day-month ture
 set -g @dracula-show-location false
 set -g @dracula-show-fahrenheit false
-set -g @dracula-show-fahrenheit false
 set -g @dracula-fixed-location "Guangzhou"
+# network speed
+set -g @dracula-network-bandwidth eth9
+set -g @dracula-network-bandwidth-interval 0
+set -g @dracula-network-bandwidth-show-interface false
+# network ping
+set -g @dracula-ping-server "google.com"
+set -g @dracula-ping-rate 3
+
 
 # -- custom variables ----------------------------------------------------------
 
