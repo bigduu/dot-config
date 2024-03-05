@@ -5,7 +5,7 @@ if wezterm.config_builder then
 	config = wezterm.config_builder()
 end
 
-config.font_size = 20
+config.font_size = 23
 -- font = wezterm.font("Hack Nerd Font Mono", { weight = "Regular" }),
 config.font = wezterm.font("Hack Nerd Font Mono")
 config.color_scheme = "Tokyo Night Moon"
