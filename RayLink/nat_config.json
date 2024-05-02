@@ -1,9 +1,0 @@
-{
-   "nat_behavior" : 4,
-   "nat_filtering" : 4,
-   "nat_ip" : "113.111.10.12",
-   "nat_type" : 5,
-   "net_download_speed" : -1,
-   "net_packet_loss" : -1.0,
-   "net_upload_speed" : -1
-}

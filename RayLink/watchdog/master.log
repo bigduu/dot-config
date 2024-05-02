@@ -1,7 +1,0 @@
-Log file written at: 2023/10/25 01:35:46
-Running on machine: dumugengdeMacBook-Pro.local
-Log line format: [IWEF]mmdd hh:mm:ss.uuuuuu threadid file:line] msg
-I1025 01:35:46.271023 55870016 log.cpp:21] Connect to success, port:53221 [master.cpp:114]
-I1025 01:35:46.271958 55870016 log.cpp:21] OnConnectionEvent [master.cpp:269]
-I1025 01:41:12.788707 55870016 log.cpp:21] {{ProcessNormalExits}} exit. [master.cpp:210]
-I1025 01:41:12.788763 55870016 log.cpp:21] Exit watchdog! [main.cpp:187]

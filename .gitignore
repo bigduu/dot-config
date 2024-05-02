@@ -12,3 +12,5 @@ sketchybar
 sketchybar/*
 yarn/
 yarn/*
+nvim
+nvim/*

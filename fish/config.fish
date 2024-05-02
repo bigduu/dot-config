@@ -1,9 +1,18 @@
-if status is-interactive
-    # Commands to run in interactive sessions can go here
-    set --local AUTOJUMP_PATH /opt/homebrew/Cellar/autojump/22.5.3_3/share/autojump/autojump.fish
-    if test -e $AUTOJUMP_PATH
-      source $AUTOJUMP_PATH
-    end
+# set -g fish_key_bindings fish_vi_key_bindings
+
+
+if not set -q NEOFETCH_RUN
+    neofetch
+    set -Ux NEOFETCH_RUN true
 end
 
-neofetch
+set -Ux GITHUB_TOKEN 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
+set -Ux JAVA_HOME /opt/homebrew/Cellar/openjdk/21.0.2
+set -Ux EDITOR /Users/bigduu/.local/share/bob/nvim-bin/nvim
+set -Ux HOME /Users/bigduu
+
+# >>> coursier install directory >>>
+set -gx PATH "$PATH:/Users/bigduu/Library/Application Support/Coursier/bin:/Users/bigduu/.config/tmux/plugins/tmuxifier/bin"
+# <<< coursier install directory <<<
+zoxide init fish | source
+fzf --fish | source
