@@ -12,7 +12,7 @@ set -Ux EDITOR /Users/bigduu/.local/share/bob/nvim-bin/nvim
 set -Ux HOME /Users/bigduu
 
 # >>> coursier install directory >>>
-set -gx PATH "$PATH:/Users/bigduu/Library/Application Support/Coursier/bin:/Users/bigduu/.config/tmux/plugins/tmuxifier/bin"
+set -gx PATH "$PATH:/Users/bigduu/Library/Application Support/Coursier/bin:/Users/bigduu/.config/tmux/plugins/tmuxifier/bin:/Users/bigduu/development/flutter/bin"
 # <<< coursier install directory <<<
 zoxide init fish | source
 fzf --fish | source
